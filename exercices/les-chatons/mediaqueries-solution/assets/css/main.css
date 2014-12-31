@@ -171,7 +171,7 @@ body {
  * MEDIAQUERIES
  */
 
-@media only screen and (min-width : 450px) and (max-width : 650px) {
+@media screen and (min-width : 450px) and (max-width : 650px) {
 
 	.diapo {
 		width: 50%;
@@ -180,7 +180,7 @@ body {
 }
 
 
-@media only screen and (max-width : 600px) {
+@media screen and (max-width : 600px) {
 
 	.main-footer li {
 		float: none;
@@ -200,7 +200,7 @@ body {
 
 }
 
-@media only screen and (max-width : 449px) {
+@media screen and (max-width : 449px) {
 
 	.diapo {
 		float: none;
