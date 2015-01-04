@@ -392,7 +392,7 @@
                 <section>
                     <h2>Contenus fluide</h2>
                     <p>
-                        Proprptiétés à utiliser<br>
+                        Propriétés à utiliser<br>
                         <small>(pas exclusives, mais importantes)</small>
                     </p>
                     <table class="table--pretty">
@@ -400,18 +400,120 @@
                             <td><code>position</code></td>
                             <td>
                                 <small>
-                                    relative, absolute, etc
+                                    relative, absolute, etc.
                                 </small>
                             </td>
                             <td>
                                 <small>
-                                    sert de référence pour les tailles en % : un élement prend sa taille en fonction de son parent le plus proche postionné
+                                    Sert de référence pour les tailles en %&nbsp;: un élement prend sa taille en fonction de son parent postionné le plus proche
+                                </small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>max-width</code></td>
+                            <td>
+                                <small>
+                                    en px ou %
+                                </small>
+                            </td>
+                            <td>
+                                <small>
+                                    Pour les containers.<br>
+                                    Plutôt que width.
+                                </small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>width</code></td>
+                            <td>
+                                <small>
+                                    en %
+                                </small>
+                            </td>
+                            <td>
+                                <small>
+                                    Pour les contenus.<br>
+                                    Pour calculer :  (Element (px) / Contexte (px) ) x 100 = Resultat (%)
                                 </small>
                             </td>
                         </tr>
                     </table>
                 </section>
 
+                <section>
+                    <h2>Contenus fluide</h2>
+                    <p>
+                        Propriétés à utiliser
+                    </p>
+                    <br>
+                    <p>Pour des images qui s'adaptent au contexte&nbsp;:</p>
+                    <pre><code>img {
+    max-width: 100%;
+    height: auto;
+}</code></pre>
+                    <p>
+                        <small>
+                            L'image prend toute la taille disponible en largeur,<br>
+                            et sa hauteur est calculée automatiquement par le navigateur.
+                        </small>
+                    </p>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Contenus fluide</h2>
+                        <p>
+                            Propriétés à utiliser
+                        </p>
+                        <br>
+                        <p>
+                            Pour se faciliter la vie avec les tailles des éléments&nbsp;:
+                        </p>
+<pre><code>*, *:before, *:after {
+    box-sizing: border-box;
+}</code></pre>
+                    <p>
+                        <small>
+                            La taille définie pour elements avec cette propriété inclu le padding et les border<br>
+                            (avec la valeur par défaut, <code>content-box</code>, ne prend en compte que le contenu)
+                        </small>
+                    </p>
+                    </section>
+
+                    <section>
+                        <h2>Contenus fluide</h2>
+                        <a href="http://css-tricks.com/box-sizing/" target="_blanck">
+                            <p>
+                                <i class="fa fa-hand-o-right"></i>&nbsp;Plus d'infos sur le box-model<br>
+                                <small>et box-sizing</small>
+                            </p>
+                            <img src="img/boxsizing.png" alt="" style="max-width: 30%; ">
+                        </a>
+                    </section>
+                    
+                </section>
+
+                <section>
+                    <h2>Contenus fluide</h2>
+                    <p>Exercice</p>
+                    <p style="color:red">METTRE EN LIGNE</p>
+                    <p>
+                        <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Télécharger l'exercice</a>
+                    </p>
+                    <p>
+                        Fluidifier les contenus de la page :
+
+                    </p>
+                    <small>
+                        <ul>
+                            <li>passer les textes en taille relative (comme vu précédemment)</li>
+                            <li>donner une largeur maximale au container au lieu d’une largeur fixe</li>
+                            <li>passer les contenus en %age au lieu des pixels (ne pas oublier de positionner les elements en relatif&nbsp;!)&nbsp;: titre, diapositives, titre du footer, liens du footer</li>
+                            <li style="opacity: 0"></li>
+                            <li><strong>pour ceux qui finissent en avance</strong>&nbsp;: on ajoute la librairie javascript <a href="http://masonry.desandro.com/" target="_blank">Masonry</a> pour ne pas avoir de “trous” dans la grille de contenus</li>
+                        </ul>
+                    </small>
+                </section>
 
 
 

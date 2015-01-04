@@ -30,7 +30,7 @@ body {
 	width: 700px;
 	margin: 0 auto;
 	border-bottom: 1px solid #301B09;
-	font-size: 1.875em; /* 30px */
+	font-size: 30px;
 	line-height: 100px;
 	font-family: 'Slabo 27px', serif;
 	text-align: center;
@@ -78,7 +78,7 @@ body {
 .diapo figcaption {
 	text-align: center;
 	margin: 20px 0;
-	font-size: .875em; /* 14px */
+	font-size: 14px;
 }
 
 
