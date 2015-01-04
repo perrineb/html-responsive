@@ -50,6 +50,9 @@
                     <h3>HTML, CSS et JS pour toutes les tailles d'écran&nbsp;!</h3>
                 </section>
 
+                <section data-background="img/device-sizes.jpg">
+                </section>
+
                 <section>
                     <h2>Qui je suis ?</h2>
                     <p>
@@ -116,7 +119,7 @@
                 <section>
                     <h2>Solutions</h2>
                     <ul>
-                        <li>Version dédiée mobile</li>
+                        <li>Version mobile dédiée</li>
                         <li>Application native</li>
                         <li>Web App</li>
                         <li>Site responsive&nbsp;!</li>
@@ -127,7 +130,7 @@
                 <section>
                     <h2>Réussir le passage vers petits écrans</h2>
                     <ul>
-                        <li>Garder un site agréable toujours à consulter</li>
+                        <li>Garder un site toujours agréable à consulter</li>
                         <li>Assurer une lecture comfortable</li>
                         <li>Faire attention aux perfomances</li>
                         <li>Avoir des interactions adaptées aux surfaces tactiles</li>
@@ -161,6 +164,14 @@
                 </section>
 
                 
+                <!--
+                    *
+                    * On s'y met
+                    *
+                    *
+                -->
+
+                
                 <section>
                     <h1>On s'y met&nbsp;!</h1>
                 </section>
@@ -174,7 +185,7 @@
                 <section>
                     <h2>Ajuster la taille des contenus</h2>
                     <p>en fonction de l'espace disponible :</p>
-                    <br><br>
+                    <br>
                     <ul>
                         <li>taille des textes relative</li>
                         <li>blocks adaptatifs</li>
@@ -182,6 +193,14 @@
                         <li>réorganisation</li>
                     </ul>
                 </section>
+
+
+                <!--
+                    *
+                    * Taille des textes
+                    *
+                    *
+                -->
 
                 <section>
                     <h2>Taille des textes</h2>
@@ -312,8 +331,96 @@
                 </section>  
 
 
+                <!--
+                    *
+                    * Contenus fluides
+                    *
+                    *
+                -->
+
+                <section>
+                    <h2>Contenus fluide</h2>
+                    <p>
+                        La taille des élements ne doit pas être figée en pixels<br>
+                        mais fluide en pourcentage.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Contenus fluide</h2>
+                    <p>Plusieurs types de layouts</p>
+                    <table class="table--pretty">
+                        <tr>
+                            <td>Fixe</td>
+                            <td>
+                                <small>
+                                    Rigide, en pixels.<br>
+                                    On n'en veut pas.
+                                </small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fluide</td>
+                            <td>
+                                <small>
+                                    Ou liquide.<br>
+                                    La taille est en pourcentage du parent, s'adapte à l'espace disponible.
+                                </small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Elastique</td>
+                            <td>
+                                <small>
+                                    Les tailles des élements sont en em/rem, donc relatifs à la taille du texte.<br>
+                                    Si j’ai une font-size de base de 48px, alors mon site, bien que sur desktop, apparait en version mobile.<br>
+                                    Exemple: <a href="http://clearleft.com/" target="_blank">ClearLeft</a>
+                                </small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mixe</td>
+                            <td>
+                                <small>
+                                    Un mélange de tout cela
+                                </small>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section>
+                    <h2>Contenus fluide</h2>
+                    <p>
+                        Proprptiétés à utiliser<br>
+                        <small>(pas exclusives, mais importantes)</small>
+                    </p>
+                    <table class="table--pretty">
+                        <tr>
+                            <td><code>position</code></td>
+                            <td>
+                                <small>
+                                    relative, absolute, etc
+                                </small>
+                            </td>
+                            <td>
+                                <small>
+                                    sert de référence pour les tailles en % : un élement prend sa taille en fonction de son parent le plus proche postionné
+                                </small>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
 
 
+
+
+                <!--
+                    *
+                    * Pour aller plus loin
+                    *
+                    *
+                -->
 
 
                 <section>
@@ -351,8 +458,34 @@
                             Parle de conception, informe sur les outils, donne des conseils, des tutoriels et des liens d'inspiration. 
                         </small>
                     </p>
-                </section>  
+                </section>
 
+
+                <section>
+                    <h2>Oh et pour finir</h2>
+                    <p>La correction des exercices ;-)</p>
+                    <br>
+                    <p>Taille des textes</p>
+                    <p style="color:red">TODO</p>
+                    <small>
+                        <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Exercice n°1</a><br>
+                        <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Exercice n°2</a><br>
+                    </small>
+                </section>    
+
+
+                <section>
+                    <h1>Merci<br>♥</h1>
+                </section>    
+
+
+                
+                <!--
+                    *
+                    * Exemples slides
+                    *
+                    *
+                -->
 
                 <section>
                     <section data-background="#007777">
@@ -441,12 +574,6 @@ function linkify( selector ) {
                 </section>
 
                 
-
-                
-                <section>
-                    <h1>THE END</h1>
-                    <h3>BY Hakim El Hattab / hakim.se</h3>
-                </section>
 
             </div>
 
