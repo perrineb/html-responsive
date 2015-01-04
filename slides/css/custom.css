@@ -1,0 +1,68 @@
+
+/* selection */    
+::-moz-selection {
+    background: #000;
+    text-shadow: none;
+    color: #fff;
+}
+
+::selection  {
+	background: #000;
+    text-shadow: none;
+    color: #fff;
+}
+
+/* change rla typo qui est trop illisible */
+/*@import url(https://fonts.googleapis.com/css?family=Lato:300);*/
+.reveal small {
+	font-weight: 300;
+}
+
+.reveal small  strong{
+	font-weight: 400;
+}
+
+
+
+a .fa, a:visited .fa {
+    color: #13daec;
+    text-decoration: none;
+    transition: color 0.15s ease 0s;
+}
+
+a:hover .fa, a:active .fa {
+    color: #71e9fa;
+}
+
+
+.reveal .navigate-down {
+	display: block;
+}
+
+
+
+.table--pretty {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.table--pretty tr:nth-child(odd) {
+	background-color: rgba(255, 255, 255, .2);
+}
+
+.table--pretty tr:last-child {
+	border-bottom: 2px solid #eeeeee;
+}
+
+.table--pretty tr:hover {
+	background-color: rgba(255, 255, 255, .06);
+}
+
+.table--pretty tr:nth-child(odd):hover {
+	background-color: rgba(255, 255, 255, .26);
+}
+
+.table--pretty td {
+	vertical-align: middle;
+	padding: .5em;
+}
