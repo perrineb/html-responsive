@@ -305,8 +305,8 @@ body {
 		top: 0;
 		left: 0;
 		right: 0;
-		z-index: 9;
 		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .4); /* Avec un joli petit box shadow pour renforcer l'effet de boite superposée au contenu */
+		z-index: 9;
 	}
 
 	body {
