@@ -37,9 +37,37 @@ body {
 }
 
 
+/* NAVIGATION */
+
+.main-nav {
+	width: 700px;
+	margin: 0 auto;
+	font-family: 'Slabo 27px', serif;
+}
+
+.main-nav li {
+	float: left;
+	width: 175px;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.main-nav a, .main-nav a:visited {
+	color: #683b14;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover, .main-nav a:active {
+	color: #874e1d;
+	text-decoration: none;
+}
+
+
 /* CONTENU */
 
 .main-content {
+	clear: left;
 	margin-top: 50px;
 	font-family: 'Architects Daughter', cursive;
 }

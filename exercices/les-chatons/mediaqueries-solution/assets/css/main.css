@@ -46,9 +46,57 @@ body {
 }
 
 
+/* NAVIGATION */
+
+
+.toggle-menu {
+	/*
+	 * Cache le lien de toggle du menu par défaut
+	 */
+	display: none;
+}
+
+.main-nav {
+	/*
+	 * Change width en max-width
+	 */
+	max-width: 700px;
+	margin: 0 auto;
+	font-family: 'Slabo 27px', serif;
+}
+
+.main-nav li {
+	/*
+	 * Passe la largeur en %
+	 * Enlève les marges pour les mettres aux li
+	 */
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+
+.main-nav a, .main-nav a:visited {
+	/*
+	 * Passe les liens en block pour qu'ils prennent tout l'espace disponible et soient plus faciles à cliquer
+	 * Ajoute le padding top et bottom qui était sur les li aux liens
+	 */
+	display: block;
+	padding: 20px;
+	color: #683b14;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover, .main-nav a:active {
+	color: #874e1d;
+	text-decoration: none;
+}
+
+
 /* CONTENU */
 
 .main-content {
+	clear: left;
 	margin-top: 50px;
 	font-family: 'Architects Daughter', cursive;
 }
@@ -190,7 +238,61 @@ body {
 		font-size: 1.125em;  /* 18px */
 	}
 
+	.main-nav li {
+		/*
+		 * On fait une navigation verticale (et non plus horizontale)
+		 * On remet les li en display block
+		 * avec une largeur automatique (ils prennent donc toute la largeur)
+		 * on enlève le float
+		 */
+		display: block;
+		width: auto;
+		float: none;
+	}
+
+	/*
+	 * On donne aux liens look plus smarthone
+	 * + une couche de JS dans js/application.js pour déplier/replier le menu
+	 */
+	.main-nav a, .main-nav a:visited {
+		background-color: #301B09;
+		color: #fefff6;
+	}
+
+	.main-nav a:hover, .main-nav a:active {
+		background-color: #683b14;
+		color: #fefff6;
+	}
+
+	.toggle-menu {
+		text-align: left;
+		background-image: url(../img/menu-open-fff.png);
+		-webkit-background-size: 17px 19px;
+		background-size: 17px 19px;
+		background-position: 95% 50%;
+		background-repeat: no-repeat;
+	}
+	
+	/* Menu cacahé par défaut */
+	.main-menu {
+		display: none;
+	}
+
+	/* Styles différents pour le toggle quand la classe menu ouvert est là */
+	.menu-opened .toggle-menu {
+		background-image: url(../img/menu-close-fff.png);
+		-webkit-background-size: 17px;
+		background-size: 17px;
+	}
+
+	/* Menu redevient visible quand la classe menu ouvert est là */
+	.menu-opened .main-menu {
+		display: block;
+	}
+
+
 }
+
 
 @media screen and (max-width : 449px) {
 
