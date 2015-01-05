@@ -48,14 +48,6 @@ body {
 
 /* NAVIGATION */
 
-
-.toggle-menu {
-	/*
-	 * Cache le lien de toggle du menu par défaut
-	 */
-	display: none;
-}
-
 .main-nav {
 	/*
 	 * Change width en max-width
@@ -81,7 +73,8 @@ body {
 	 * Ajoute le padding top et bottom qui était sur les li aux liens
 	 */
 	display: block;
-	padding: 20px;
+	padding: 1.5em; /* 20px */
+	line-height: 1em;
 	color: #683b14;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -263,33 +256,6 @@ body {
 		background-color: #683b14;
 		color: #fefff6;
 	}
-
-	.toggle-menu {
-		text-align: left;
-		background-image: url(../img/menu-open-fff.png);
-		-webkit-background-size: 17px 19px;
-		background-size: 17px 19px;
-		background-position: 95% 50%;
-		background-repeat: no-repeat;
-	}
-	
-	/* Menu cacahé par défaut */
-	.main-menu {
-		display: none;
-	}
-
-	/* Styles différents pour le toggle quand la classe menu ouvert est là */
-	.menu-opened .toggle-menu {
-		background-image: url(../img/menu-close-fff.png);
-		-webkit-background-size: 17px;
-		background-size: 17px;
-	}
-
-	/* Menu redevient visible quand la classe menu ouvert est là */
-	.menu-opened .main-menu {
-		display: block;
-	}
-
 
 }
 

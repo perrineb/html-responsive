@@ -48,6 +48,7 @@ body {
 
 /* NAVIGATION */
 
+
 .main-nav {
 	/*
 	 * Change width en max-width
@@ -73,7 +74,7 @@ body {
 	 * Ajoute le padding top et bottom qui était sur les li aux liens
 	 */
 	display: block;
-	padding: 1.5em; /* 20px */;
+	padding: 1.5em; /* 20px */
 	line-height: 1em;
 	color: #683b14;
 	text-decoration: none;
@@ -83,6 +84,13 @@ body {
 .main-nav a:hover, .main-nav a:active {
 	color: #874e1d;
 	text-decoration: none;
+}
+
+.main-nav .toggle-menu {  /* on surqualifie le lien pour overwriter .main-nav a */
+	/*
+	 * Cache le lien de toggle du menu par défaut
+	 */
+	display: none;
 }
 
 
@@ -197,4 +205,126 @@ body {
 	color: #FFE3CC;
 	text-decoration: none;
 }
+
+
+
+/*
+ * MEDIAQUERIES
+ */
+
+@media screen and (min-width : 450px) and (max-width : 650px) {
+
+	.diapo {
+		width: 50%;
+	}
+
+}
+
+
+@media screen and (max-width : 600px) {
+
+	.main-footer li {
+		float: none;
+		width: auto;
+	}
+
+	.main-footer a {
+		/*
+		 * on passe les liens en display block pour qu'ils prennent toute la largeur disponible
+		 * on ajoute du padding, pour qu'ils soient plus faciles à cliquer
+		 * on augmentes la taille de la typo pour qu'elle soit plus lisible sur mobile
+		 */
+		display: block;
+		padding: 15px;
+		font-size: 1.125em;  /* 18px */
+	}
+
+	.main-nav li {
+		/*
+		 * On fait une navigation verticale (et non plus horizontale)
+		 * On remet les li en display block
+		 * avec une largeur automatique (ils prennent donc toute la largeur)
+		 * on enlève le float
+		 */
+		display: block;
+		width: auto;
+		float: none;
+	}
+
+	/*
+	 * On donne aux liens look plus smarthone
+	 * + une couche de JS dans js/application.js pour déplier/replier le menu
+	 */
+	.main-nav a, .main-nav a:visited {
+		background-color: #301B09;
+		color: #fefff6;
+	}
+
+	.main-nav a:hover, .main-nav a:active {
+		background-color: #683b14;
+		color: #fefff6;
+	}
+
+	.main-nav .toggle-menu { /* on surqualifie le lien pour overwriter .main-nav a */
+		display: block;
+		text-align: left;
+		background-image: url(../img/menu-open-fff.png);
+		-webkit-background-size: 17px 19px;
+		background-size: 17px 19px;
+		background-position: 95% 50%;
+		background-repeat: no-repeat;
+	}
+	
+	/* Menu cacahé par défaut */
+	.main-menu {
+		display: none;
+	}
+
+	/* Styles différents pour le toggle quand la classe menu ouvert est là */
+	.menu-opened .toggle-menu {
+		background-image: url(../img/menu-close-fff.png);
+		-webkit-background-size: 17px;
+		background-size: 17px;
+	}
+
+	/* Menu redevient visible quand la classe menu ouvert est là */
+	.menu-opened .main-menu {
+		display: block;
+	}
+
+
+	/*
+	 * Enfin
+	 * Repositionnement des contenus :
+	 * menu en haut de la page, toujours visible
+	 * contenu en dessous
+	 */
+	
+	.main-nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 9;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .4); /* Avec un joli petit box shadow pour renforcer l'effet de boite superposée au contenu */
+	}
+
+	body {
+		margin-top: 3.5em; /* hauteur du menu padding-top + line-height + padding-bottom */
+	}
+
+
+
+}
+
+
+@media screen and (max-width : 449px) {
+
+	.diapo {
+		float: none;
+		width: 100%;  /* on ne peut pas mettre "auto" car masonry a besoin qu'on précise la largeur pour fonctionner correctement */
+	}
+
+}
+
 
