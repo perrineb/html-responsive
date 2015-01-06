@@ -26,6 +26,10 @@
 	color: #6BE5F0;  /* #13daec / 8beaf2 / 6BE5F0 // neg ee3a2a*/
 }
 
+.reveal .light {
+	color: #828282;
+} 
+
 
 a .fa, a:visited .fa {
     color: #13daec;

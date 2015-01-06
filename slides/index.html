@@ -563,7 +563,7 @@
                 <section>
                     <section>
                         <h4>Contenus fluide</h4>
-                        <h2>Exercice</h2>
+                        <h2>Exercice avec des chatons</h2>
                         <p style="color:red">METTRE EN LIGNE</p>
                         <p>
                             <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Télécharger l'exercice</a>
@@ -626,12 +626,12 @@
                     </p>
                     <br>
                     <p>
-                        Par exemple quand :
+                        Par exemple quand le contenu &nbsp;:
                     </p>
                     <small>
                         <ul>
-                            <li>le contenu explose</li>
-                            <li>le contenu devient illisible (45-90 caractères par ligne pour une bonne lisibilité)</li>
+                            <li>ne ressemble plus à rien</li>
+                            <li>devient illisible (45-90 caractères par ligne pour une bonne lisibilité)</li>
                         </ul>
                     </small>
                 </section>
@@ -641,9 +641,16 @@
                     <h2>Ecrire une media query</h2>
                     <br>
                     <p>
-                        
+                        <small>
+                            <code>@media [ONLY | NOT] *type_de_media* [AND (*critère* : *valeur*)]</code>
+                        </small>
                     </p>
-                    <pre><code>coucou</code></pre>
+                    <br>
+                    <p>
+                        <span class="light">Exemple&nbsp;:</span> <code>@media screen and (width : 680px)</code>
+                        <small><i class="fa fa-long-arrow-right"></i>&nbsp;si mon média est un écran et que la fenêtre fait 680px de large</small>
+                    </p>
+                    <br>
                     <p>
                         <small>
                             <a href="http://www.w3.org/TR/css3-mediaqueries/" target="_blank">
@@ -655,13 +662,167 @@
 
                 <section>
                     <h4>Media queries</h4>
-                    <h2>Où ajouter la media query</h2>
+                    <h2>Medias</h2>
+                    <br>
+                    <small>
+                        <table class="table--pretty">
+                            <tr>
+                                <td>
+                                    <code>NOT</code><br>
+                                    <code>ONLY</code>
+                                </td>
+                                <td>
+                                    facultatif
+                                </td>
+                                <td>
+                                    Si on cette media query sert à exclure ou limiter certains types de medias.<br>
+                                    Rarement utilisé en responsive.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>all</code><br>
+                                    <code>screen</code><br>
+                                    <code>print</code><br>
+                                    etc.
+                                </td>
+                                <td>
+                                    facultatif<br>
+                                    vaut <code>all</code> quand il n'est pas précisé
+                                </td>
+                                <td>
+                                    Pour cibler un type de media en particulier.
+                                </td>
+                            </tr>
+                        </table>
+                    </small>
+                    <br>
+                    <br>
                     <p>
-                        <small></small>
+                        <span class="light">Exemple&nbsp;:</span> <code>@media ONLY screen</code><br>
+                        <small><i class="fa fa-long-arrow-right"></i>&nbsp;si mon média est un écran et rien d'autre</small>
                     </p>
                 </section>
 
                 <section>
+                    <h4>Media queries</h4>
+                    <h2>Critères</h2>
+                    <br>
+                    <small>
+                        <table class="table--pretty">
+                            <tr>
+                                <td>
+                                    <code>width</code><br>
+                                    <code>min-width</code><br>
+                                    <code>max-width</code><br>
+                                    <code>height</code><br>
+                                    etc.
+                                </td>
+                                <td>
+                                    taille en px, em, rem
+                                </td>
+                                <td>
+                                    Pour cibler en fonction de la taille de la fenêtre.<br>
+                                    Ex&nbsp;: <code>(min-width : 450px)</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>orientation</code><br>
+                                </td>
+                                <td>
+                                    <code>portrait</code><br>
+                                    <code>landscape</code>
+                                </td>
+                                <td>
+                                    Pour cibler par l'orientation (portait ou paysage) de la fenêtre.<br>
+                                    Ex&nbsp;: <code>(orientation : portrait)</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>resolution</code><br>
+                                    <code>min-resolution</code><br>
+                                    <code>max-resolution</code>
+                                </td>
+                                <td>
+                                    Nombre
+                                </td>
+                                <td>
+                                    La résolution de l’écran, pour cibler les écran rétina et leur servir des images plus grandes.<br>
+                                    Ex&nbsp;: <code>(min-resolution : 1.5)</code>
+                                </td>
+                            </tr>
+                        </table>
+                    </small>
+                    <br><br>
+                    <p>
+                        <small>Mais aussi d'autres moins souvent utilisés, comme&nbsp;: device-aspect-ratio, device-width, device-height…</small>
+                    </p>
+                </section>
+
+
+                <section>
+                    <h4>Media queries</h4>
+                    <h2>Séparateurs</h2>
+                    <br>
+                    <small>
+                        <table class="table--pretty">
+                            <tr>
+                                <td>
+                                    <code>AND</code>
+                                </td>
+                                <td>
+                                    Pour additionner un media et un ou plusieurs critères exclusifs
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>,</code>
+                                </td>
+                                <td>
+                                    Pour concaténer des règles incompatibles
+                                </td>
+                            </tr>
+                        </table>
+                    </small>
+                    <br>
+                    <br>
+                    <p>
+                        <small>
+                            <span class="light">Exemple&nbsp;:</span> <code>@media screen and (min-width : 450px), <br>
+                            screen and (orientation : portait) and (max-width : 1024px)</code><br><br>
+                            <i class="fa fa-long-arrow-right"></i>&nbsp;si mon média est un <strong>écran</strong> et que la fenêtre fait au <strong>minimum 450px de large</strong>,<br>
+                            ou si mon media est un <strong>écran</strong> en <strong>orientation portait</strong> dont la fenêtre</strong> fait au <strong>maximum 1024px de large</strong>
+                        </small>
+                    </p>
+                </section>
+
+
+                <section>
+                    <h4>Media queries</h4>
+                    <h2>Où ajouter la media query</h2>
+                    <p>
+                        2 possibilités
+                    </p>
+                    <br>
+                    <p>
+                        <strong>1. Dans la feuille de style</strong><br>
+                        <pre><code>@media screen and (width : 680px) {
+    height: 200px;
+}</code></pre>
+                        <small>Plus simple, plus facile à maintenir.</small><br>
+                    </p>
+                    <br>
+                    <p>
+                        <strong>2. Dans l'appel de feuille de style</strong><br>
+                        <pre><code><link rel="stylesheet" media="screen and (width : 680px)" href="example.css" /></code></pre>
+                        <small>Permet de gagner en poid au téléchargement, car la CSS n'est chargée que si elle rempli les conditions.</small><br>
+                    </p>
+                </section>
+
+
+                <!-- <section>
                     <h4>Media queries</h4>
                     <h2>Avec SASS</h2>
                     <p>
@@ -672,7 +833,7 @@
                             <i class="fa fa-hand-o-right"></i>&nbsp;SASS
                         </a>
                     </p>
-                </section>
+                </section> -->
 
                 <section>
                     <h4>Media queries</h4>
@@ -687,6 +848,85 @@
                             <i class="fa fa-hand-o-right"></i>&nbsp;Polyfill pour IE8 : Respond
                         </a>
                     </p>
+                </section>
+
+                <section>
+                    <section>
+                        <h4>Media queries</h4>
+                        <h2>Exercice arc-en-ciel</h2>
+                        <p style="color:red">METTRE EN LIGNE</p>
+                        <p>
+                            <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Télécharger l'exercice</a>
+                        </p>
+                        <p>
+                            Créer des breakpoints pour chacun de ces critères :
+                        </p>
+                        <small>
+                            <ul>
+                                <li>moins de 580px : couleur de fond du body =  #FF7A7B</li>
+                                <li>plus de 580px et moins de 700px : couleur de fond du body =  #FFD053 </li>
+                                <li>plus de 700px et moins de 820px : couleur de fond du body =  #FFFF60</li>
+                                <li>plus de 820px et moins de 940px : couleur de fond du body =  #C9FB4A</li>
+                                <li>plus de 940px et moins de 1060px : couleur de fond du body =  #A2FFFF</li>
+                                <li>plus de 1060px et moins de 1180px : couleur de fond du body =  #89D9FF</li>
+                                <li>plus de 1180px : couleur de fond du body =  #DD89DE</li>
+                                <li style="opacity: 0;"></li>
+                                <li>moins de 640px en portrait : couleur du texte =  #FFD053</li>
+                                <li>moins de 640px en portrait : couleur du texte =  #FFD053</li>
+                                <li>plus de 640px et moins de 960px, et plus de 1200px : couleur du texte =  #AFE130</li>
+                                <li>plus de 960px et moins de 1200px : couleur du texte =  #9d499e</li>
+                            </ul>
+                        </small>
+                    </section>
+
+                    <section>
+                        <h4>Media queries</h4>
+                        <h2>Exercice arc-en-ciel (suite)</h2>
+                        <br>
+                        <small>
+                            <strong>Pour ceux qui finissent en avance</strong><br><br>
+                            ajouter un peu de responsive (taille de la boite, taille des images de background à adapter)
+                        </small>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h4>Media queries</h4>
+                        <h2>Exercice avec des chatons</h2>
+                        <p>
+                            <small>
+                                On reprend l'exercice de la partie précédente
+                            </small>
+                        </p>
+                        <p>
+                            Ajouter des breakpoints lorsque c'est necessaire :
+                        </p>
+                        <small>
+                            <ul>
+                                <li>1<sup>er</sup> breakpoint : passer d’une grille de 4 chatons à une grille de 2</li>
+                                <li>
+                                    2<sup>ème</sup> breakpoint :
+                                    <ul>
+                                        <li>réduire la hauteur de la banière, qui prend trop de place sur petit écran</li>
+                                        <li>mettre les elements du footer les uns en dessous des autres</li>
+                                        <li>mettre les elements du menu les uns en dessous des autres, et leur donner une apparence plus “mobile” : ils prennent toute la largeur, prennent comme bg par défaut #301B09, comme bg au survol #683b14 et comme couleur de texte #fefff6</li>
+                                    </ul>
+                                </li>
+                                <li>3<sup>ème</sup> breakpoint : mettre 1 element par ligne (plus besoin du float !)</li>
+                            </ul>
+                        </small>
+                    </section>
+                    
+                    <section>
+                        <h4>Media queries</h4>
+                        <h2>Exercice avec des chatons</h2>
+                        <br>
+                        <small>
+                            <strong>Pour ceux qui finissent en avance</strong><br><br>
+                            on passe en mobile first ! La plus petite taille d’écran est traitée par défaut, les autres s’ajoutent par dessus.
+                        </small>
+                    </section>
                 </section>
 
 
