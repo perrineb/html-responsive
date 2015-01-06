@@ -8,193 +8,208 @@
 /* GENERAL */
 
 * {
-    box-sizing: border-box;	 /* http://css-tricks.com/box-sizing/ */
+    box-sizing: border-box;  /* http://css-tricks.com/box-sizing/ */
 }
 
 body {
-	background-color: #FFE3CC;
-	color: #301B09;
+    background-color: #FFE3CC;
+    color: #301B09;
 }
 
 .main-header, .main-content {
-	/*
-	 * Change width en max-width
-	 */
-	display: block;
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 0 10px;
+    /*
+     * Change width en max-width
+     */
+    display: block;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 
 /* HEADER */
 
 .main-title {
-	/*
-	 * Ajoute un positionnement relatif 
-	 * Change width en max-width
-	 * Enlève le line-height et ajoute du padding en haut et en bas
-	 */
-	position: relative;
-	max-width: 700px;
-	margin: 0 auto;
-	padding: 40px;
-	border-bottom: 1px solid #301B09;
-	font-size: 1.875em; /* 30px */
-	font-family: 'Slabo 27px', serif;
-	text-align: center;
+    /*
+     * Ajoute un positionnement relatif 
+     * Change width en max-width
+     * Enlève le line-height et ajoute du padding en haut et en bas
+     */
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    font-size: 1.875em; /* 30px */
+    font-family: 'Slabo 27px', serif;
+    text-align: center;
+}
+
+.banner {
+    /*
+     * Ajoute un positionnement relatif 
+     * Change width en max-width
+     * Ajoute un background-size: cover
+     */
+    position: relative;
+    max-width: 700px;
+    height: 119px;
+    margin: 0 auto;
+    background: url(../img/banner-cat.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
 }
 
 
 /* NAVIGATION */
 
 .main-nav {
-	/*
-	 * Change width en max-width
-	 */
-	max-width: 700px;
-	margin: 0 auto;
-	font-family: 'Slabo 27px', serif;
+    /*
+     * Change width en max-width
+     */
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Slabo 27px', serif;
 }
 
 .main-nav li {
-	/*
-	 * Passe la largeur en %
-	 * Enlève les marges pour les mettres aux li
-	 */
-	float: left;
-	width: 25%;
-	text-align: center;
+    /*
+     * Passe la largeur en %
+     * Enlève les marges pour les mettres aux li
+     */
+    float: left;
+    width: 25%;
+    text-align: center;
 }
 
 .main-nav a, .main-nav a:visited {
-	/*
-	 * Passe les liens en block pour qu'ils prennent tout l'espace disponible et soient plus faciles à cliquer
-	 * Ajoute le padding top et bottom qui était sur les li aux liens
-	 */
-	display: block;
-	padding: 1.5em; /* 20px */;
-	line-height: 1em;
-	color: #683b14;
-	text-decoration: none;
-	text-transform: uppercase;
+    /*
+     * Passe les liens en block pour qu'ils prennent tout l'espace disponible et soient plus faciles à cliquer
+     * Ajoute le padding top et bottom qui était sur les li aux liens
+     */
+    display: block;
+    padding: 1.5em; /* 20px */;
+    line-height: 1em;
+    color: #683b14;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .main-nav a:hover, .main-nav a:active {
-	color: #874e1d;
-	text-decoration: none;
+    color: #874e1d;
+    text-decoration: none;
 }
 
 
 /* CONTENU */
 
 .main-content {
-	clear: left;
-	margin-top: 50px;
-	font-family: 'Architects Daughter', cursive;
+    clear: left;
+    margin-top: 50px;
+    font-family: 'Architects Daughter', cursive;
 }
 
 .diapos {
-	overflow: hidden;
-	margin: 0 -10px;
+    overflow: hidden;
+    margin: 0 -10px;
 }
 
 .diapo {
-	/*
-	 * Passe la taillee en %
-	 */
-	float: left;
-	width: 25%;
+    /*
+     * Passe la taillee en %
+     */
+    float: left;
+    width: 25%;
 }
 
 .diapo:nth-child(4n+5) { /* http://css-tricks.com/how-nth-child-works/ */
-	clear: both;
+    clear: both;
 }
 
 .diapo figure {
-	margin: 10px;
-	border: 1px solid #301B09;
-	padding: 10px;
-	border-radius: 2px;
-	background-color: #fefff6;
-	box-shadow: 1px 1px 2px 0px rgba(156, 111, 75, .5);
+    margin: 10px;
+    border: 1px solid #301B09;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: #fefff6;
+    box-shadow: 1px 1px 2px 0px rgba(156, 111, 75, .5);
 }
 
 .diapo figure:hover {
-	box-shadow: 1px 1px 2px 0px rgba(156, 111, 75, .8);
+    box-shadow: 1px 1px 2px 0px rgba(156, 111, 75, .8);
 }
 
 .diapo img {
-	/*
-	 * Donne une taille en % et une hauteur automatique (l'image trouve la bonne hauteur pour conserver son ratio)
-	 */
-	position: relative;
-	width: 100%;
-	height: auto;
+    /*
+     * Donne une taille en % et une hauteur automatique (l'image trouve la bonne hauteur pour conserver son ratio)
+     */
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .diapo figcaption {
-	text-align: center;
-	margin: 20px 0;
-	font-size: .875em; /* 14px */
+    text-align: center;
+    margin: 20px 0;
+    font-size: .875em; /* 14px */
 }
 
 
 /* FOOTER */
 
 .main-footer {
-	display: block;
-	clear: both;
-	margin-top: 50px;
-	padding: 50px 0 80px;
-	border-top: 5px solid #FFE985;
-	text-align: center;
-	font-family: 'Slabo 27px', serif;
-	color: #FFE985;
-	background-color: #301B09;
+    display: block;
+    clear: both;
+    margin-top: 50px;
+    padding: 50px 0 80px;
+    border-top: 5px solid #FFE985;
+    text-align: center;
+    font-family: 'Slabo 27px', serif;
+    color: #FFE985;
+    background-color: #301B09;
 }
 
 .main-footer h2 {
-	/*
-	 * Change width en max-width
-	 */
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 0 10px;
-	font-size: 1.5em; /* 24px */
+    /*
+     * Change width en max-width
+     */
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-size: 1.5em; /* 24px */
 }
 
 .main-footer ul {
-	/*
-	 * Ajoute un positionnement relatif
-	 * Change width en max-width
-	 */
-	position: relative;
-	max-width: 960px;
-	margin: 50px auto 0;
-	padding: 0 10px;
-	font-size: .875em; /* 14px */
+    /*
+     * Ajoute un positionnement relatif
+     * Change width en max-width
+     */
+    position: relative;
+    max-width: 960px;
+    margin: 50px auto 0;
+    padding: 0 10px;
+    font-size: .875em; /* 14px */
 }
 
 .main-footer li {
-	/*
-	 * Passe la taillee en %
-	 */
-	float: left;
-	width: 20%;
+    /*
+     * Passe la taillee en %
+     */
+    float: left;
+    width: 20%;
 }
 
 .main-footer a {
-	padding: 10px
+    padding: 10px
 }
 
 .main-footer a, .main-footer a:visited {
-	color: #FFE985;
-	text-decoration: none;
+    color: #FFE985;
+    text-decoration: none;
 }
 
 .main-footer a:hover, .main-footer a:active {
-	color: #FFE3CC;
-	text-decoration: none;
+    color: #FFE3CC;
+    text-decoration: none;
 }
 
