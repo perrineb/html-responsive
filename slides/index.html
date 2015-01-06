@@ -47,7 +47,7 @@
             <div class="slides">
                 <section>
                     <h1>Responsive<br>Web Design</h1>
-                    <h3>HTML, CSS et JS pour toutes les tailles d'écran&nbsp;!</h3>
+                    <h3 class="colored">HTML, CSS et JS pour toutes les tailles d'écran&nbsp;!</h3>
                 </section>
 
                 <section data-background="img/device-sizes.jpg">
@@ -56,7 +56,7 @@
                 <section>
                     <h2>Qui je suis ?</h2>
                     <p>
-                        Perrine Bocquin,<br>
+                        <span class="colored">Perrine Bocquin</span>,<br>
                         développeuse front end en agence web depuis 6 ans,<br>
                         en freelance depuis 1 mois&nbsp;!
                     </p>
@@ -131,9 +131,9 @@
                     <h2>Réussir le passage vers petits écrans</h2>
                     <ul>
                         <li>Garder un site toujours agréable à consulter</li>
-                        <li>Assurer une lecture comfortable</li>
-                        <li>Faire attention aux perfomances</li>
+                        <li>Assurer une lecture confortable</li>
                         <li>Avoir des interactions adaptées aux surfaces tactiles</li>
+                        <li>Faire attention aux perfomances</li>
                     </ul>
                 </section>
 
@@ -172,7 +172,7 @@
                 <section>
                     <h2>Quels sont les outils&nbsp;?</h2>
                     <br>
-                    <p>HTML, beaucoup de CSS, un peu de Javascript</p>
+                    <p><span class="colored">HTML</span>, beaucoup de <span class="colored">CSS</span>, un peu de <span class="colored">Javascript</span></p>
                     <!-- @todo : ajouter image logo html5 / css3 / javascript (cf http://fr.slideshare.net/antoniodepasquale/responsive-webdesign-workshopantoniodepasquale?qid=4c6388a4-7165-459f-9be1-797a93ffc352&v=qf1&b=&from_search=1 - - - slide 13)   -->
                 </section>
 
@@ -236,7 +236,7 @@
                 -->
 
                 <section>
-                    <h2>Taille des textes</h2>
+                    <h2 class="colored">Taille des textes</h2>
                     <p>
                         On utilise des unités relatives pour les textes (plus de px)<br>
                         comme les <strong>em</strong>, <strong>rem</strong> et <strong>pourcentages</strong>.
@@ -253,8 +253,8 @@
 
 
                 <section>
-                    <h2>Taille des textes</h2>
-                    <p>En pratique</p>
+                    <h4>Taille des textes</h4>
+                    <h2>En pratique</h2>
                     <table class="table--pretty">
                         <tr>
                             <td>EM</td>
@@ -292,10 +292,8 @@
                 
 
                 <section>
-                    <h2>Taille des textes</h2>
-                    <p>
-                        Tester
-                    </p>
+                    <h4>Taille des textes</h4>
+                    <h2>Tester</h2>
                     <p>
                         <small>
                             Pour voir le résultat facilement en fonction des différentes tailles de texte&nbsp;:<br><br>
@@ -324,8 +322,8 @@
                 
 
                 <section>
-                    <h2>Taille des textes</h2>
-                    <p>Exercice n°1</p>
+                    <h4>Taille des textes</h4>
+                    <h2>Exercice n°1</h2>
                     <p style="color:red">TODO</p>
                     <p>
                         <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Télécharger l'exercice</a>
@@ -345,8 +343,8 @@
                 </section>
 
                 <section>
-                    <h2>Taille des textes</h2>
-                    <p>Exercice n°2</p>
+                    <h4>Taille des textes</h4>
+                    <h2>Exercice n°2</h2>
                     <p style="color:red">TODO</p>
                     <p>
                         <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Télécharger l'exercice</a>
@@ -372,7 +370,7 @@
                 -->
 
                 <section>
-                    <h2>Contenus fluide</h2>
+                    <h2 class="colored">Contenus fluide</h2>
                     <p>
                         La taille des élements ne doit pas être figée en pixels<br>
                         mais fluide en pourcentage.
@@ -380,8 +378,8 @@
                 </section>
 
                 <section>
-                    <h2>Contenus fluide</h2>
-                    <p>Plusieurs types de layouts</p>
+                    <h4>Contenus fluide</h4>
+                    <h2>Plusieurs types de layouts</h2>
                     <table class="table--pretty">
                         <tr>
                             <td>Fixe</td>
@@ -407,7 +405,7 @@
                                 <small>
                                     Les tailles des élements sont en em/rem, donc relatifs à la taille du texte.<br>
                                     Si j’ai une font-size de base de 48px, alors mon site, bien que sur desktop, apparait en version mobile.<br>
-                                    Exemple: <a href="http://clearleft.com/" target="_blank">ClearLeft</a>
+                                    Exemple&nbsp;: <a href="http://clearleft.com/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;ClearLeft</a>
                                 </small>
                             </td>
                         </tr>
@@ -423,9 +421,9 @@
                 </section>
 
                 <section>
-                    <h2>Contenus fluide</h2>
+                    <h4>Contenus fluide</h4>
+                    <h2>Propriétés clés</h2>
                     <p>
-                        Propriétés à utiliser<br>
                         <small>(pas exclusives, mais importantes)</small>
                     </p>
                     <table class="table--pretty">
@@ -474,10 +472,8 @@
                 </section>
 
                 <section>
-                    <h2>Contenus fluide</h2>
-                    <p>
-                        Propriétés à utiliser
-                    </p>
+                    <h4>Contenus fluide</h4>
+                    <h2>Propriétés clés</h2>
                     <br>
                     <p>Pour des images qui s'adaptent au contexte&nbsp;:</p>
                     <pre><code>img {
@@ -494,10 +490,47 @@
 
                 <section>
                     <section>
-                        <h2>Contenus fluide</h2>
+                        <h4>Contenus fluide</h4>
+                        <h2>Propriétés clés</h2>
+                        <br>
+                        <p>Pour des images de background&nbsp;:</p>
+                        <pre><code>div {
+    background-image: url(images/chaton.jpg);
+    background-position: 50%; /* pour center */
+    background-size: cover;
+}</code></pre>
                         <p>
-                            Propriétés à utiliser
+                            <small>
+                                L'image de fond prend toutes la place disponible.<br>
+                                A moins d'avoir le même ratio (hauteur / largeur) que l'element, elle est cropée.
+                            </small>
                         </p>
+                    </section>
+
+                    <section>
+                        <h4>Contenus fluide</h4>
+                        <h2>Propriétés clés</h2>
+                        <br>
+                        <p>
+                            Pour des images de background&nbsp;:<br>
+                            <small>(suite)</small>
+                        </p>
+                        <img src="img/background-size-illustration.jpg" alt="'Background-size: cover' illustration">
+                        <br>
+                        <p>
+                            <small>
+                                ATTENTION&nbsp;: background-size n'est pas supportée par IE8.<br>
+                                Une librairie jquery pour remplacer : <a href="http://srobbin.com/jquery-plugins/backstretch/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;BackStretch</a>
+                            </small>
+                        </p>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h4>Contenus fluide</h4>
+                        <h2>Propriétés clés</h2>
                         <br>
                         <p>
                             Pour se faciliter la vie avec les tailles des éléments&nbsp;:
@@ -515,7 +548,7 @@
 
                     <section>
                         <h2>Contenus fluide</h2>
-                        <a href="http://css-tricks.com/box-sizing/" target="_blanck">
+                        <a href="http://css-tricks.com/box-sizing/" target="_blank">
                             <p>
                                 <i class="fa fa-hand-o-right"></i>&nbsp;Plus d'infos sur le box-model<br>
                                 <small>et box-sizing</small>
@@ -529,8 +562,8 @@
 
                 <section>
                     <section>
-                        <h2>Contenus fluide</h2>
-                        <p>Exercice</p>
+                        <h4>Contenus fluide</h4>
+                        <h2>Exercice</h2>
                         <p style="color:red">METTRE EN LIGNE</p>
                         <p>
                             <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Télécharger l'exercice</a>
@@ -540,16 +573,19 @@
                         </p>
                         <small>
                             <ul>
+                                <li style="color: red">TODO : ajouter une image de bg sur un element et la faire passer en cover</li>
                                 <li>passer les textes en taille relative (comme vu précédemment)</li>
                                 <li>donner une largeur maximale au container au lieu d’une largeur fixe</li>
-                                <li>passer les contenus en %age au lieu des pixels (ne pas oublier de positionner les elements en relatif&nbsp;!)&nbsp;: titre, menu, diapositives, titre du footer, liens du footer.</li>
+                                <li>passer les contenus en %age au lieu des pixels<br>
+                                    (ne pas oublier de positionner les elements en relatif&nbsp;!)&nbsp;:<br>
+                                    titre, menu, diapositives, titre du footer, liens du footer.</li>
                             </ul>
                         </small>
                     </section>
 
                     <section>
-                        <h2>Contenus fluide</h2>
-                        <p>Exercice (suite)</p>
+                        <h4>Contenus fluide</h4>
+                        <h2>Exercice (suite)</h2>
                         <p>
                             Fluidifier les contenus de la page :
                         </p>
@@ -570,7 +606,88 @@
                     *
                 -->
 
+                <section>
+                    <h2 class="colored">Media queries</h2>
+                    <p>
+                        Lorsque la page fluide ne suffit pas,<br>
+                        on crée des points de rupture pour lesquels les styles changent.
+                    </p>
+                </section>
 
+                <section>
+                    <h4>Media queries</h4>
+                    <h2>Content is king !</h2>
+                    <p>
+                        <small>
+                            Les breakpoints doivent être appliqués là où ils sont necessaire, et non déterminés à l'avance.<br>
+                            Appliquez les CSS de base, agrandissez/réduisez la taille de la fenêtre, et lorsque c’est necessaire :<br>
+                            ajoutez un breakpoint !
+                        </small>
+                    </p>
+                    <br>
+                    <p>
+                        Par exemple quand :
+                    </p>
+                    <small>
+                        <ul>
+                            <li>le contenu explose</li>
+                            <li>le contenu devient illisible (45-90 caractères par ligne pour une bonne lisibilité)</li>
+                        </ul>
+                    </small>
+                </section>
+
+                <section>
+                    <h4>Media queries</h4>
+                    <h2>Ecrire une media query</h2>
+                    <br>
+                    <p>
+                        
+                    </p>
+                    <pre><code>coucou</code></pre>
+                    <p>
+                        <small>
+                            <a href="http://www.w3.org/TR/css3-mediaqueries/" target="_blank">
+                                <i class="fa fa-hand-o-right"></i>&nbsp;la spec complète des media queries sur le site du W3C
+                            </a>
+                        </small>
+                    </p>
+                </section>
+
+                <section>
+                    <h4>Media queries</h4>
+                    <h2>Où ajouter la media query</h2>
+                    <p>
+                        <small></small>
+                    </p>
+                </section>
+
+                <section>
+                    <h4>Media queries</h4>
+                    <h2>Avec SASS</h2>
+                    <p>
+                        pour gagner du temps et de la lisibilité
+                    </p>
+                    <p>
+                        <a href="http://sass-lang.com/" target="_blank">
+                            <i class="fa fa-hand-o-right"></i>&nbsp;SASS
+                        </a>
+                    </p>
+                </section>
+
+                <section>
+                    <h4>Media queries</h4>
+                    <h2>ATTENTION</h2>
+                    <br>
+                    <p>
+                        Les media queries ne sont pas supportées par IE8.
+                    </p>
+                    <br>
+                    <p>
+                        <a href="https://github.com/scottjehl/Respond" target="_blank">
+                            <i class="fa fa-hand-o-right"></i>&nbsp;Polyfill pour IE8 : Respond
+                        </a>
+                    </p>
+                </section>
 
 
 
@@ -629,6 +746,13 @@
                     <small>
                         <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Exercice n°1</a><br>
                         <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Exercice n°2</a><br>
+                    </small>
+                    <br>
+                    <br>
+                    <p>Contenu fluides</p>
+                    <p style="color:red">METTRE EN LIGNE</p>
+                    <small>
+                        <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Exercice des chatons</a>
                     </small>
                 </section>    
 

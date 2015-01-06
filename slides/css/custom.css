@@ -12,7 +12,7 @@
     color: #fff;
 }
 
-/* change rla typo qui est trop illisible */
+/* change la typo qui est trop illisible */
 /*@import url(https://fonts.googleapis.com/css?family=Lato:300);*/
 .reveal small {
 	font-weight: 300;
@@ -22,6 +22,9 @@
 	font-weight: 400;
 }
 
+.reveal h4, .reveal .colored {
+	color: #6BE5F0;  /* #13daec / 8beaf2 / 6BE5F0 // neg ee3a2a*/
+}
 
 
 a .fa, a:visited .fa {
