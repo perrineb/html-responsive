@@ -1,0 +1,74 @@
+
+/* FONTS */
+
+/* pour les textes */
+@import url(http://fonts.googleapis.com/css?family=Slabo+27px|Architects+Daughter&subset=latin-ext);
+
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.diaporama, .diaporama__images {
+    position: relative;
+    height: 100%;
+    width: 100%; 
+    overflow: hidden;   
+}
+
+.diaporama li {
+    position: absolute;
+    height: 100%;
+    width: 100%;    
+    top: 0;
+    left: 0;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.diaporama li img {
+    display: none;
+}
+
+
+/* Navigation */
+
+.diaporama-next, .diaporama-prev {
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: -2.5em;
+    height: 5em;
+    width: 5em;
+    color: #fff;
+}
+
+.diaporama-next:hover, .diaporama-next:active
+.diaporama-prev:hover, .diaporama-prev:active {
+    color: #ddd;
+}
+
+.diaporama-next {
+    right: 20px;
+}
+
+.diaporama-prev {
+    left: 20px;
+}
+
+.diaporama-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.diaporama-nav li {
+    display: inline-block;
+}
+
+
+
