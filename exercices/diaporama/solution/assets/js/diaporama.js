@@ -48,11 +48,15 @@
         // Todo :  Swipe !
 
         $diaporama.hammer().bind('swipeleft', function (event) {
-             diaporamaGoToNext();
+            diaporamaGoToNext();
         });
 
         $diaporama.hammer().bind('swiperight', function (event) {
-             diaporamaGoToPrev()
+            diaporamaGoToPrev()
+        });
+
+        $('.diaporama__image').hammer().bind('tap', function (event) {
+            $(this).toggleClass('legend-visible')
         });
 
 

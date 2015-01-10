@@ -1245,23 +1245,74 @@
                 <section>
                     <h4 class="colored">Interactions au touch</h4>
                     <h2>Librairie JS</h2>
+                    <br>
                     <p>
-                        <a href="http://hammerjs.github.io/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Hammer.js</a>
+                        <a href="http://hammerjs.github.io/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Hammer.js</a><br>
+                        <a href="https://github.com/hammerjs/jquery.hammer.js" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Plugin jQuery pour Hammer.js</a>
                     </p>
                 </section>
 
+
                 <section>
                     <h4 class="colored">Interactions au touch</h4>
-                    <h2>Exercice&nbsp;: diaporama</h2>
-                    <p style="color:red">TODO</p>
-                        <p>
-                            <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Télécharger l'exercice</a>
-                        </p>
+                    <h2>Hammer.js</h2>
                     <p>
-                    <p>
-                        Ajouter la possibilité de "swiper" pour naviguer sur le diaporama,<br>
-                        en utilisant la librairie Hammer.js
+                        <small>avec le plugin jQuery</small>
                     </p>
+                    <pre><code>$(element).hammer(options).bind("nom_de_l_evenement", function() { ... });</code></pre>
+                    <br>
+                    <p>
+                        <small>
+                            La liste des evènements disponibles avec Hammer se trouve dans la documentation > Recognizers.<br>
+                            Ex&nbsp;: <a href="http://hammerjs.github.io/recognizer-pan/ " target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Evènements pour "pan"</a>
+                        </small>
+                    </p>
+                </section>
+
+
+                <section>
+                    <section>
+                        <h4 class="colored">Interactions au touch</h4>
+                        <h2>Exercice&nbsp;: diaporama</h2>
+                        <p style="color:red">METTRE EN LIGNE</p>
+                            <p>
+                                <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Télécharger l'exercice</a>
+                            </p>
+                        <p>
+                        <p>
+                            Ajouter la possibilité de "swiper" pour naviguer sur le diaporama,<br>
+                            en utilisant la librairie Hammer.js
+                        </p>
+                        <br>
+                        <small>
+                            <li>Vérifier la présence de Hammer.js et de son plugin jQuery.</li>
+                            <li>
+                                Dans <code>js/diaporama.js</code>, ajouter des écouteurs d'évenements pour le swipe (vers la gauche et la droite)<br>
+                                <a href="http://hammerjs.github.io/recognizer-swipe/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;evènements swipe dans Hammer.js</a>
+                            </li>
+                            <li>
+                                Faire en sorte que ces évènements permettent de naviguer à l'image suivante ou l'image précédente.
+                            </li>
+                        </small>
+                    </section>
+
+                    <section>
+                        <h4 class="colored">Interactions au touch</h4>
+                        <h2>Exercice&nbsp;: diaporama (suite)</h2>
+                        <p>
+                            Ajouter des evènements touch :
+                        </p>
+                        <br>
+                        <small>
+                            <strong>Pour ceux qui finissent en avance</strong><br><br>
+                            <ul>
+                                <li>Ajouter un titre pour chacune des images</li>
+                                <li>cacher ce titre par défaut</li>
+                                <li>l'afficher lorsqu'on "tap" sur l'image</li>
+                            </ul>
+                        </small>
+                    </section>
+
                 </section>
 
 

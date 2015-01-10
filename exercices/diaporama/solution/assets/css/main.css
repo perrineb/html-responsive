@@ -1,13 +1,8 @@
 
-/* FONTS */
-
-/* pour les textes */
-@import url(http://fonts.googleapis.com/css?family=Slabo+27px|Architects+Daughter&subset=latin-ext);
-
-
 body, html {
     height: 100%;
     width: 100%;
+    font-family: Verdana, sans-serif;
 }
 
 .diaporama, .diaporama__images {
@@ -28,8 +23,22 @@ body, html {
     background-size: cover;
 }
 
-.diaporama li img {
+.diaporama img {
     display: none;
+}
+
+.diaporama .legend {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    right: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.legend-visible .legend {
+    display: block;
 }
 
 
