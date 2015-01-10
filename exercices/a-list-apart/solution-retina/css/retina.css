@@ -1,0 +1,116 @@
+
+
+img {
+    height: auto;
+}
+
+
+/* Header */
+
+.home-page:not(.alt-layout) .wide-hero, .issue-page .wide-hero {
+    padding-top: 0;
+}
+
+.wide-hero .issue-number {
+    background: url("../img/badge.png") no-repeat scroll 0 0 transparent;
+}
+@media screen and (min-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) {
+    .wide-hero .issue-number {
+        background-image: url("../img/badge@2x.png");
+        background-size: 120px 120px;
+    }
+}
+
+
+/* Footer */
+
+/* afiliation */
+
+.global-footer .affiliates > a {
+    color: transparent;
+    display: inline-block;
+    height: 60px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 60px;
+}
+
+.affiliates .aea {
+    background-image: url("../img/logo_an-event-apart_mark.png");
+}
+@media screen and (min-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) {
+    .wide-hero .issue-number {
+        background-image: url("../img/logo_an-event-apart_mark@2x.png");
+        background-size: 60px 60px;
+    }
+}
+
+.affiliates .hc {
+    background-image: url("../img/logo_happy-cog.png");
+}
+@media screen and (min-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) {
+    .wide-hero .issue-number {
+        background-image: url("../img/logo_happy-cog@2x.png");
+        background-size: 60px 60px;
+    }
+}
+
+
+.affiliates .aba {
+    background-image: url("../img/logo_a-book-apart_3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 63px;
+}
+@media screen and (min-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) {
+    .wide-hero .issue-number {
+        background-image: url("../img/logo_a-book-apart_3@2x.png");
+        background-size: 60px 63px;
+    }
+}
+
+.affiliates .arcus {
+    background-image: url("../img/logo_arcustech.png");
+    background-repeat: no-repeat;
+}
+@media screen and (min-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) {
+    .wide-hero .issue-number {
+        background-image: url("../img/logo_arcustech@2x.png");
+        background-size: 60px 60px;
+    }
+}
+
+
+/* image de fin */
+
+.deadly-subtitle {
+    background: url("../img/bg_for-people-who.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+    background-size: 100% auto;
+    max-width: 960px;
+    left: 50%;
+    margin-left: -480px;
+    bottom: 0;
+    color: transparent;
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    text-indent: 100%;
+    top: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+@media screen and (min-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) {
+    .deadly-subtitle {
+        background-image: url("../img/bg_for-people-who@2x.png");
+        background-size: 985px 58px;
+    }
+}
+@media screen and (max-width: 960px) {
+    .deadly-subtitle {
+        margin-left: 0;
+        left: 0;
+    }
+}
+
+

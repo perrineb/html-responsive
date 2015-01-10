@@ -1,0 +1,62 @@
+
+
+/* Header */
+
+.home-page:not(.alt-layout) .wide-hero, .issue-page .wide-hero {
+    padding-top: 0;
+}
+
+.wide-hero .issue-number {
+    background: url("../img/badge.png") no-repeat scroll 0 0 transparent;
+}
+
+
+/* Footer */
+
+/* afiliation */
+
+.global-footer .affiliates > a {
+    color: transparent;
+    display: inline-block;
+    height: 60px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 60px;
+}
+
+.affiliates .aea {
+    background-image: url("../img/logo_an-event-apart_mark.png");
+}
+
+.affiliates .hc {
+    background-image: url("../img/logo_happy-cog.png");
+}
+
+.affiliates .aba {
+    background-image: url("../img/logo_a-book-apart_3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 63px;
+}
+
+.affiliates .arcus {
+    background-image: url("../img/logo_arcustech.png");
+    background-repeat: no-repeat;
+}
+
+
+/* image de fin */
+
+.deadly-subtitle {
+    background: url("../img/bg_for-people-who.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+    bottom: 0;
+    color: transparent;
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    text-indent: 100%;
+    top: auto;
+    white-space: nowrap;
+    width: 100%;
+}

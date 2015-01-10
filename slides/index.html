@@ -900,45 +900,369 @@
                     </section>
                 </section>
 
+                <!-- <section> -->
                 <section>
-                    <section>
-                        <h4>Media queries</h4>
-                        <h2>Exercice avec des chatons</h2>
-                        <p>
-                            <small>
-                                On reprend l'exercice de la partie précédente
-                            </small>
-                        </p>
-                        <p>
-                            Ajouter des breakpoints lorsque c'est necessaire :
-                        </p>
+                    <h4>Media queries</h4>
+                    <h2>Exercice avec des chatons</h2>
+                    <p>
                         <small>
-                            <ul>
-                                <li>1<sup>er</sup> breakpoint : passer d’une grille de 4 chatons à une grille de 2</li>
-                                <li>
-                                    2<sup>ème</sup> breakpoint :
-                                    <ul>
-                                        <li>réduire la hauteur de la banière, qui prend trop de place sur petit écran</li>
-                                        <li>mettre les elements du footer les uns en dessous des autres</li>
-                                        <li>mettre les elements du menu les uns en dessous des autres, et leur donner une apparence plus “mobile” : ils prennent toute la largeur, prennent comme bg par défaut #301B09, comme bg au survol #683b14 et comme couleur de texte #fefff6</li>
-                                    </ul>
-                                </li>
-                                <li>3<sup>ème</sup> breakpoint : mettre 1 element par ligne (plus besoin du float !)</li>
-                            </ul>
+                            On reprend l'exercice de la partie précédente
                         </small>
-                    </section>
+                    </p>
+                    <p>
+                        Ajouter des breakpoints lorsque c'est necessaire :
+                    </p>
+                    <small>
+                        <ul>
+                            <li>1<sup>er</sup> breakpoint : passer d’une grille de 4 chatons à une grille de 2</li>
+                            <li>
+                                2<sup>ème</sup> breakpoint :
+                                <ul>
+                                    <li>réduire la hauteur de la banière, qui prend trop de place sur petit écran</li>
+                                    <li>mettre les elements du footer les uns en dessous des autres</li>
+                                    <li>mettre les elements du menu les uns en dessous des autres, et leur donner une apparence plus “mobile” : ils prennent toute la largeur, prennent comme bg par défaut #301B09, comme bg au survol #683b14 et comme couleur de texte #fefff6</li>
+                                </ul>
+                            </li>
+                            <li>3<sup>ème</sup> breakpoint : mettre 1 element par ligne (plus besoin du float !)</li>
+                        </ul>
+                    </small>
+                </section>
                     
-                    <section>
+                    <!-- <section>
                         <h4>Media queries</h4>
                         <h2>Exercice avec des chatons</h2>
                         <br>
                         <small>
                             <strong>Pour ceux qui finissent en avance</strong><br><br>
-                            on passe en mobile first ! La plus petite taille d’écran est traitée par défaut, les autres s’ajoutent par dessus.
+                            on passe en <strong>mobile first</strong> !<br>
+                            La plus petite taille d’écran est traitée par défaut, les autres s’ajoutent par dessus.
                         </small>
-                    </section>
+                    </section> -->
+                <!-- </section> -->
+
+
+
+                <!--
+                    *
+                    * le rétina
+                    *
+                    *
+                -->
+                        
+                <section>
+                    <h2 class="colored">Densité de pixels</h2>
+                    <p>
+                        Certain écrans sont dits “rétina”.<br>
+                        <small>
+                            Pour une même surface, on a plus de pixels sur un écran rétina que sur un écran classique, ce qui donne aux aux images et textes un aspect très net. 
+                        </small>
+                    </p>
+                    <img src="img/retina.png" alt="comparaison écrans retina / non-retina">
+                    <p>
+                        <a href="http://bjango.com/articles/min-device-pixel-ratio/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Votre écran est-il rétina ?</a><br>
+                    </p>
                 </section>
 
+
+                <section>
+                    <h4 class="colored">Densité de pixels</h4>
+                    <h2>
+                        Affichage sur écran rétina
+                    </h2>
+                    <br>
+                    <p>
+                        Les pixels sont plus petits, donc l’écran n’affiche pas les contenus à la taille réèle des pixels, car tous les contenus serait trop petit et illisible.
+                    </p>
+                    <p>
+                        <small>
+                            <strong>Pour les textes</strong> : c'est géré directement par le navigateur
+                        </small>
+                    </p>
+                    <p>
+                        <small>
+                            <strong>Pour les visuels</strong> : il faut fournir des contenus adaptés.
+                        </small>
+                    </p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Densité de pixels</h4>
+                    <h2>
+                        Images rétina
+                    </h2>
+                    <br>
+                    <p>
+                        L'image doit être 2 fois plus grande<br>
+                        que la taille à laquelle elle va être affichée.
+                        <br>
+                        <small>
+                        <br>
+                            Conventionnellement, on suffixe son nom avec <code>@2x</code>
+                        </small>
+                    </p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Densité de pixels</h4>
+                    <h2>
+                        Image inline rétina
+                    </h2>
+                    <br>
+                    <p>
+                        Pour une image rétina <code>logo@2x.png</code> qui fait 160px x 400px
+                    </p>
+                    <p>
+                        <pre><code>&lt;img src="logo@2x.png" alt="Logo" height="80" width="200"&gt;</code></pre>
+                        
+                    </p>
+                    <p>
+                        <small>
+                            <br>
+                            <strong>Attention</strong> : il existe de stechniques pour servir l'image inline à la bonne taille,<br>
+                            nous les verons plus tard.
+                        </small>
+                    </p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Densité de pixels</h4>
+                    <h2>
+                        Image de background rétina
+                    </h2>
+                    <br>
+                    <p>
+                        <pre><code>.facebook {
+    background: url("fb.png") 50% 50% no-repeat;  // fb.png fait 20px x 10px
+}
+
+@media screen and (min-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) {  
+    .facebook {
+        background-image: url("fb@2x.png";  // fb@2x.png fait 40px x 20px;
+        background-size: 20px 10px;
+    } 
+}</code></pre>
+
+                    </p>
+                </section>
+
+
+                <section>
+                    <h4 class="colored">Densité de pixels</h4>
+                    <h2>Exercice : a list appart</h2>
+                    <p style="color:red">METTRE EN LIGNE</p>
+                        <p>
+                            <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Télécharger l'exercice</a>
+                        </p>
+                    <p>
+                        Remplacer les images par des images rétina<br>
+                        lorsque c'est nécessaire :
+                    </p>
+                    <small>
+                        <ul>
+                            <li>pour les images inline</li>
+                            <li>pour les images de background</li>
+                        </ul>
+                    </small>
+                </section>
+
+
+
+                <!--
+                    *
+                    * Spécificités des petits écrans
+                    *
+                    *
+                -->
+
+                <section>
+                    <h1>Spécificités<br>des petits écrans</h1>
+                </section>
+
+                <!--
+                    *
+                    * Optimisation de l’espace disponible
+                    *
+                    *
+                -->
+
+                <section>
+                    <h2 class="colored">Optimisation de l’espace disponible</h2>
+                    <br>
+                    <p>petit écran = moins de place</p>
+                    <p>
+                        <small>
+                            Il faut optimiser l'espace pour que l'information reste accesssible.
+                        </small>
+                    </p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Optimisation de l’espace disponible</h4>
+                    <h2>Comment optimiser ?</h2>
+                    <br>
+                    <p> 
+                        On cache ce qui n'est pas immédiatement utile (mais donner un moyen d'y accéder quand même)<br>
+                        <small>
+                            <br>
+                            menus, commentaires, détails sur un élément, etc.
+                        </small>
+                    </p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Optimisation de l’espace disponible</h4>
+                    <h2>Exemple</h2>
+                    <p>
+                        <a href="http://fr.m.wikipedia.org/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Wikipedia pour mobile</a>
+                    </p>
+                    <!-- <img src="img/optim-espace.jpg" alt="Wikipedia - exemple d'optimisation de l'espace" style="width: 50%;"> -->
+                    <img src="img/wikipedia1.jpg" alt="" style="width: 25%">
+                    <img src="img/wikipedia2.jpg" alt="" style="width: 25%">
+                    <p>
+                        <small>
+                            Rubriques fermées par défaut<br>
+                            Plus de sommaire en haut de l'article<br>
+                            Plus de colonne de droite<br>
+                            Menu glissant caché par défaut
+                        </small>
+                    </p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Optimisation de l’espace disponible</h4>
+                    <h2>Exemple</h2>
+                    <p>
+                        <a href="http://alistapart.com/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;A List Appart</a>
+                    </p>
+                    <!-- <img src="img/optim-espace.jpg" alt="Wikipedia - exemple d'optimisation de l'espace" style="width: 50%;"> -->
+                    <img src="img/ala-menu.jpg" alt="" style="width: 25%">
+                    <img src="img/ala-comments.jpg" alt="" style="width: 25%">
+                    <p>
+                        <small>
+                            Menu en colonne caché par défaut<br>
+                            Commentaires chargés à la demande<br>
+                        </small>
+                    </p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Optimisation de l’espace disponible</h4>
+                    <h2>Exercice avec des chatons</h2>
+                    <p>
+                        <small>
+                            On reprend (encore) l'exercice
+                        </small>
+                    </p>
+                    <p>
+                        Optimiser le menu pour petit écran :
+                    </p>
+                    <small>
+                        <ul>
+                            <li>le menu placé tout en haut de la page, en fixed</li>
+                            <li>
+                                il s'ouvre et se ferme au click :
+                                <ul>
+                                    <li>
+                                        Ajouter en JS au début de <code>.main-nav</code> un lien<br>
+                                        à cliquer (utiliser <code>.prepend()</code>)<br>
+                                        <pre><code><a href="#main-menu" class="toggle-menu">Menu</a></code></pre>
+                                    </li>
+                                    <li>
+                                        Sur ce lien, ajouter un event listener pour le click<br>
+                                        (utiliser <code>.on('click', function(event) { ... }</code>)
+                                    </li>
+                                    <li>
+                                        au click sur le lien, ajouter ou retier une class <code>.menu-opened</code> sur <code>.main-nav</code>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>styler le lien qui ouvre et ferme le menu :
+                                <ul>
+                                    <li>quand le menu est fermé, afficher en bg l'icone <i class="fa fa-bars"></i></li>
+                                    <li>quand le menu est ouvert, l'icone <i class="fa fa-times"></i></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </small>
+                </section>
+
+                <section>
+                    <h4 class="colored">Optimisation de l’espace disponible</h4>
+                    <h2>Pour aller plus loin</h2>
+                    <br>
+                    <p>
+                        Tutoriels pour : 
+                    </p>
+                    <p>
+                        <a href="http://css-tricks.com/off-canvas-menu-with-css-target/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;faire un menu qui glisse de la gauche, tout en CSS</a>
+                    </p>
+                    <p>
+                        <a href="http://www.iandevlin.com/blog/2013/06/css/css-stacking-with-display-table" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;changer l'ordre des élements d'une page</a>
+                    </p>
+                </section>
+
+
+                <!--
+                    *
+                    * Interaction au touch
+                    *
+                    *
+                -->
+
+                <section>
+                    <h2 class="colored">Interaction au touch</h2>
+                    <br>
+                    <p>On interagit avec les écrans tactiles avec les doigts, et pas un clavier et une souris.</p>
+                    <p>Ce sont les "<strong>touch gestures</strong>"</p>
+                </section>
+
+
+                <section>
+                    <h4 class="colored">Interaction au touch</h4>
+                    <h2>Touch gestures</h2>
+                    <br>
+                    <small>
+                        <ul>
+                            <li>
+                                <strong>Tap, double tap</strong>&nbsp;: équivalent du click, double click.
+                            </li>
+                            <li>
+                                <strong>Pan</strong>&nbsp;: déplacement du doigt du doigt sur l'écran (équivalent du drag and drop)
+                            </li>
+                            <li>
+                                <strong>Swipe</strong>&nbsp;: balayer l’écran avec le doigt, de haut en bas, droite à gauche...
+                            </li>
+                            <li>
+                                <strong>Pinch</strong>&nbsp;: avec 2 doigts : pincer, écarter les doigts, pour zoomer et dézoomer par exemple.
+                            </li>
+                            <li>
+                                etc.
+                            </li>
+                        </ul>
+                    </small>
+                </section>
+
+                <section>
+                    <h4 class="colored">Interaction au touch</h4>
+                    <h2>Librairie JS</h2>
+                    <p>
+                        <a href="http://hammerjs.github.io/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Hammer.js</a>
+                    </p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Interaction au touch</h4>
+                    <h2>Exercice&nbsp;: diaporama</h2>
+                    <p style="color:red">TODO</p>
+                        <p>
+                            <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Télécharger l'exercice</a>
+                        </p>
+                    <p>
+                    <p>
+                        Ajouter la possibilité de "swiper" pour naviguer sur le diaporama,<br>
+                        en utilisant la librairie Hammer.js
+                    </p>
+                </section>
 
 
                 <!--
@@ -1010,103 +1334,6 @@
                 <section>
                     <h1>Merci<br>♥</h1>
                 </section>    
-
-
-                
-                <!--
-                    *
-                    * Exemples slides
-                    *
-                    *
-                -->
-
-                <section>
-                    <section data-background="#007777">
-                        <h2>Slide Backgrounds</h2>
-                        <p>
-                            Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-                        </p>
-                        <a href="#" class="image navigate-down">
-                            <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-                        </a>
-                    </section>
-                    <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-                        <h2>Image Backgrounds</h2>
-                        <pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-                    </section>
-                    <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-                        <h2>Repeated Image Backgrounds</h2>
-                        <pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-                    </section>
-                </section>
-
-                
-
-                <section>
-                    <h2>Clever Quotes</h2>
-                    <p>
-                        These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                        &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-                    </p>
-                    <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                        &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-                        reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-                    </blockquote>
-                </section>
-
-                <section>
-                    <h2>Pretty Code</h2>
-                    <pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-                    </code></pre>
-                    <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-                </section>
-
-
-                <section>
-                    <section id="fragments">
-                        <h2>Fragmented Views</h2>
-                        <p>Hit the next arrow...</p>
-                        <p class="fragment">... to step through ...</p>
-                        <ol>
-                            <li class="fragment"><code>any type</code></li>
-                            <li class="fragment"><em>of view</em></li>
-                            <li class="fragment"><strong>fragments</strong></li>
-                        </ol>
-
-                        <aside class="notes">
-                            This slide has fragments which are also stepped through in the notes window.
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Fragment Styles</h2>
-                        <p>There's a few styles of fragments, like:</p>
-                        <p class="fragment grow">grow</p>
-                        <p class="fragment shrink">shrink</p>
-                        <p class="fragment roll-in">roll-in</p>
-                        <p class="fragment fade-out">fade-out</p>
-                        <p class="fragment highlight-red">highlight-red</p>
-                        <p class="fragment highlight-green">highlight-green</p>
-                        <p class="fragment highlight-blue">highlight-blue</p>
-                        <p class="fragment current-visible">current-visible</p>
-                        <p class="fragment highlight-current-blue">highlight-current-blue</p>
-                    </section>
-                </section>
-
-                
 
             </div>
 
