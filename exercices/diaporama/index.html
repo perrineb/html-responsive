@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         
-        <title>HTML Responsive - Fluid - Exercice n°1</title>
+        <title>HTML Responsive - Interactions au touch - Diaporama</title>
 
         <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/font-awesome.css">
@@ -12,15 +12,20 @@
     <body>
 
         <ul class="diaporama">
-            <li><img src="img/1.jpg" alt=""></li>                        
-            <li><img src="img/2.jpg" alt=""></li>                        
-            <li><img src="img/3.jpg" alt=""></li>                        
-            <li><img src="img/4.jpg" alt=""></li>                        
-            <li><img src="img/5.jpg" alt=""></li>                        
-        </ul>
+            <ul class="diaporama__images">
+                <li style="background-image: url(assets/img/1.jpg);" class="diaporama__image"><img src="assets/img/1.jpg" alt=""></li>                        
+                <li style="background-image: url(assets/img/2.jpg);" class="diaporama__image"><img src="assets/img/2.jpg" alt=""></li>                        
+                <li style="background-image: url(assets/img/3.jpg);" class="diaporama__image"><img src="assets/img/3.jpg" alt=""></li>                        
+                <li style="background-image: url(assets/img/4.jpg);" class="diaporama__image"><img src="assets/img/4.jpg" alt=""></li>                        
+                <li style="background-image: url(assets/img/5.jpg);" class="diaporama__image"><img src="assets/img/5.jpg" alt=""></li>                        
+            </ul>
+
+            <a href="#" class="diaporama-next"><i class="fa fa-arrow-circle-right fa-5x"></i></a>
+            <a href="#" class="diaporama-prev"><i class="fa fa-arrow-circle-left fa-5x"></i></a>
+        </div>
 
         <script src="assets/js/jquery-1.11.2.js"></script>   
-        <script src="assets/js/hammer.js"></script>   
+        <script src="assets/js/hammer.min.js"></script>
         <script src="assets/js/diaporama.js"></script>
     </body>
 </html>
