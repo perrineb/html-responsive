@@ -27,7 +27,7 @@ body, html {
     display: none;
 }
 
-.diaporama .legend {
+.diaporama figcaption {
     display: none;
     position: absolute;
     bottom: 10px;
@@ -37,7 +37,7 @@ body, html {
     color: #fff;
 }
 
-.legend-visible .legend {
+.legend-visible figcaption {
     display: block;
 }
 
