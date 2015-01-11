@@ -1688,6 +1688,17 @@
                     <h1>Metadonnées<br>&amp;<br>informations sur la page</h1>
                 </section>
 
+                <section>
+                    <h4 class="colored">Metadonnées</h4>
+                    <h2>Rappel</h2>
+                    <br>
+                    <p>Les metadonnées sont des balises présentes dans le <code>&lt;head&gt;</code> du document HTML.<br><br>
+                        <small>
+                            Elles ne sont pas affichées dans la page, mais donnent des informations supplémentaires au navigateur.
+                        </small>
+                    </p>
+                </section>
+
                 
                 <!--
                     *
@@ -1780,7 +1791,7 @@
                         </tr>
                         <tr>
                             <td>
-                                device-width</td>
+                                width=device-width</td>
                             <td>
                                 <small>
                                     Affiche le site dans la résolution virtuelle de l'écran
@@ -1861,6 +1872,101 @@
                 </section>
 
 
+                <!--
+                    *
+                    * Metadonnées pour une webapp
+                    *
+                    *
+                -->
+
+                <section>
+                    <h2 class="colored">Le Metadonnées des WebApps</h2>
+                    <br>     
+                    <p>
+                        Il existe des metadonnées spécifiques lorsqu’on développe pour mobile<br>
+                        <small>
+                            pour configurer les icones de l'écran d'accueil, les splashscreens.
+                        </small>
+                    </p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Le Metadonnées des WebApps</h4>
+                    <h2>Titre de la WebApp</h2>
+                    <br>     
+                    <img src="img/app-icon.png" alt="" style="width: 15%">
+                    <pre><code>&lt;meta name="apple-mobile-web-app-title" content="Titre de la page"&gt;</code></pre>
+                    <p>
+                        <small>Si elle n'est pas présente, c’est le title de la page qui est utilisé</small>
+                    </p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Le Metadonnées des WebApps</h4>
+                    <h2>tailles d’icones</h2>
+                    <p>
+                        en fonction du device
+                    </p>
+                    <br>     
+                    <small>
+                    <pre><code><!-- iPad and iPad mini (with @2× display) iOS ≥ 8 -->
+&lt;link rel="apple-touch-icon-precomposed" sizes="180x180" href="apple-touch-icon-180x180-precomposed.png"&gt;
+<!-- iPad 3+ (with @2× display) iOS ≥ 7 -->
+&lt;link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png"&gt;
+<!-- iPad (with @2× display) iOS ≤ 6 -->
+&lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png"&gt;
+<!-- iPhone (with @2× and @3 display) iOS ≥ 7 -->
+&lt;link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png"&gt;
+<!-- iPhone (with @2× display) iOS ≤ 6 -->
+&lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png"&gt;
+<!-- iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7 -->
+&lt;link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76-precomposed.png"&gt;
+<!-- iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6 -->
+&lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png"&gt;
+<!-- Android Stock Browser and non-Retina iPhone and iPod Touch -->
+&lt;link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57x57-precomposed.png"&gt;
+<!-- Fallback for everything else -->
+&lt;link rel="shortcut icon" href="apple-touch-icon.png"&gt;
+<!--
+Chrome 31+ has home screen icon 192×192 (the recommended size for multiple resolutions).
+If it’s not defined on that size it will take 128×128.
+-->
+&lt;link rel="icon" sizes="192x192" href="touch-icon-192x192.png"&gt;
+&lt;link rel="icon" sizes="128x128" href="touch-icon-128x128.png"&gt;
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+&lt;meta name="msapplication-TileImage" content="apple-touch-icon-144x144-precomposed.png"&gt;</code></pre>
+                        
+                    </small>
+                </section>
+
+
+                 <section>
+                    <h4 class="colored">Le Metadonnées des WebApps</h4>
+                    <h2>Startup image</h2>
+                    <p>
+                        en fonction du device
+                    </p>
+                    <br>     
+                    <small style="position: relative; width: 100%;">
+                    <pre style="position: relative; width: 100%;"><code><!-- iOS 6 & 7 iPad (retina, portrait) -->
+&lt;link href="apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"&gt;
+<!-- iOS 6 & 7 iPad (retina, landscape) -->
+&lt;link href="apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"&gt;
+<!-- iOS 6 iPad (portrait) -->
+&lt;link href="apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image"&gt;
+<!-- iOS 6 iPad (landscape) -->
+&lt;link href="apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image"&gt;
+<!-- iOS 6 & 7 iPhone 5 -->
+&lt;link href="apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"&gt;
+<!-- iOS 6 & 7 iPhone (retina) -->
+&lt;link href="apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"&gt;
+<!-- iOS 6 iPhone -->
+&lt;link href="apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image"&gt;</code></pre>
+                        
+                    </small>
+                </section>
+
+
 
 
 
@@ -1917,8 +2023,8 @@
                     <p>Taille des textes</p>
                     <p style="color:red">TODO</p>
                     <small>
-                        <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Exercice n°1</a><br>
-                        <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Exercice n°2</a><br>
+                        <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Exercice REM</a><br>
+                        <a href="#" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Exercice EM</a><br>
                     </small>
                     <br>
                     <br>
