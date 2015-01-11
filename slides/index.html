@@ -1353,7 +1353,7 @@
                     <h4 class="colored">Approche Mobile First</h4>
                     <h2>Pourquoi&nbsp;?</h2>
                     <br>
-                    <p>Pour que le navigateur le moins puissant (smartphone) ait moins de commandes à interpréer.</p>
+                    <p>Pour que le navigateur le moins puissant (smartphone) ait moins de commandes à charger et interpréer.</p>
                 </section>
 
                 <section>
@@ -1362,7 +1362,15 @@
                     <br>
                     <p>
                         <small>
-                            On reprend l'exercice, on passe les instructions en mobile-first.
+                            On reprend l'exercice, on passe les instructions en mobile-first.<br><br>
+                            Les instructions pour petite écran qui overwritaient celles pour plus grand écran deviennet les instructions par défaut.<br>
+                            Les instructions pour grand écran sont dans des media queries.
+                        </small>
+                        <br><br>
+                        <small>
+                            Ex&nbsp;:<br>
+                            <code>.diapo</code> est en <strong>float:left</strong> fait <strong>25%</strong> par défaut, <strong>50%</strong> entre <strong>450px et 650px</strong>, et <strong>100%</strong> pour les écrans <strong>&lt;450px</strong>.<br>
+                            <code>.diapo</code> n'aura <strong>pas de float par défaut</strong> et fera <strong>100% de large</strong>, sera en <strong>float:left</strong> pour les écrans <strong>&gt;450px</strong>, <strong>50%</strong> de large entre <strong>450px et 650px</strong>, et <strong>25%</strong> pour les écran <strong>&gt;650px</strong>.
                         </small>
                     </p>
                 </section>
