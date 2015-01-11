@@ -1323,7 +1323,7 @@
                 </section>
 
 
-                 <!--
+                <!--
                     *
                     * Performances
                     *
@@ -1653,7 +1653,6 @@
                 </section>
 
 
-
                 <section>
                     <h4 class="colored">Taille assets</h4>
                     <h2>Grunt</h2>
@@ -1675,6 +1674,190 @@
                     <p>
                         <a href="http://gruntjs.com/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Grunt</a>
                     </p>
+                </section>
+
+
+                <!--
+                    *
+                    * Metadonnées
+                    *
+                    *
+                -->
+
+                <section>
+                    <h1>Metadonnées<br>&amp;<br>informations sur la page</h1>
+                </section>
+
+                
+                <!--
+                    *
+                    * Mobile-first
+                    *
+                    *
+                -->
+
+                <section>
+                    <h2 class="colored">Le viewport</h2>
+                    <br>
+                    <p>Le viewport désigne la surface virtuelle de la fenêtre du navigateur.</p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Le viewport</h4>
+                    <h2>C'est quoi ?</h2>
+                    <br>     
+                    <p>
+                        Une meta donnée du fichier HTML.
+                    </p>
+                    <br>
+                    <p>
+                        <small>
+                            La meta viewport explique au navigateur mobile comment il doit gérer sa fenêtre,<br>
+                            et comment il doit afficher le contenu.
+                        </small>
+                    </p>
+                    <br>
+                    <small>
+                        <ul>
+                            <li>autorisation du zoom ou pas, et dans quelle mesure</li>
+                            <li>simulation d'un écran plus grand ou plus petit</li>
+                            <li>etc.</li>
+                        </ul>
+                    </small>
+                    <br>
+                    <br>
+                    <pre><code>&lt;meta name="viewport" content="width=600px, initial-scale=1.0"&gt;</code></pre>
+                </section>
+
+
+                <section>
+                    <h4 class="colored">Le viewport</h4>
+                    <h2>Exemple de l'iPhone4</h2>
+                    <br>     
+                    <table class="table--pretty">
+                        <tr>
+                            <td>largeur de l'écran,<br>en px réelle</td>
+                            <td>
+                                640px
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>device-width</td>
+                            <td>
+                                320px
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>viewport appliqué par défaut par Safari Mobile</td>
+                            <td>
+                                980px
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>viewport appliqué avec<br>
+                                <small><code>&lt;meta name="viewport" content="width=600px"&gt;</code></small>
+                            </td>
+                            <td>
+                                600px
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+
+
+                <section>
+                    <h4 class="colored">Le viewport</h4>
+                    <h2>Valeurs possibles</h2>
+                    <br>     
+                    <table class="table--pretty">
+                        <tr>
+                            <td>width=XXXpx</td>
+                            <td>
+                                <small>
+                                    Affiche le site dans la résolution demandée
+                                </small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                device-width</td>
+                            <td>
+                                <small>
+                                    Affiche le site dans la résolution virtuelle de l'écran
+                                </small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                initial-scale=X.X<br>
+                                minimum-scale=X.X<br>
+                                maximum-scale=X.X
+                            </td>
+                            <td>
+                                <small>
+                                    Contrôle du zoom<br>
+                                    Zoome initial sur la page, et zoom/dézoom maximul autorisés
+                                </small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                user-scalable=yes ou no
+                            </td>
+                            <td>
+                                <small>
+                                    Autorisation du zoom
+                                </small>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section>
+                    <h4 class="colored">Le viewport</h4>
+                    <h2>A utiliser de préférence</h2>
+                    <br>
+                    <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre> 
+                    <p>
+                        Mais le travail sur le responsive doit bien fait !
+                    </p>
+                </section>
+
+
+                <section>
+                    <h4 class="colored">Le viewport</h4>
+                    <h2>Exercice</h2>
+                    <br>
+                    <p>
+                       Reprendre la dernière version des chatons.<br>
+                       Sous chrome en mode device, faire des tests avec différentes valeurs pour voir les différences d'affichage.<br>
+                       <small>
+                           En précisant un device-width, en autorisant le zoom ou pas, en bloquant le zoom à certaines valeurs…
+                       </small>
+                    </p>
+                    <small>
+                        <p>
+                            Essayer par exemple :
+                        </p>
+                        <ul>
+                            <li>
+                                <code>&lt;meta name="viewport" content="width=800px, user-scalable=yes"&gt;</code>
+                            </li>
+                            <li>
+                                <code>&lt;meta name="viewport" content="width=800px, user-scalable=no"&gt;</code>
+                            </li>
+                            <li>
+                                <code>&lt;meta name="viewport" content="width=200px"&gt;</code>
+                            </li>
+                            <li>
+                                <code>&lt;meta name="viewport" content="width=1500px, user-scalable=no"&gt;</code>
+                            </li>
+                            <li>
+                                <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>
+                            </li>
+                            <li>etc.</li>
+                        </ul>
+                    </small>
                 </section>
 
 
