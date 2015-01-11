@@ -1575,10 +1575,83 @@
                     <br>
                     <p>
                         <small>
-                            Une fois chargés les fonts et les CSS de l'iconefonts, il suffit de rajouter de selements avec la bonne class pour avoir les icônes, jamais pixellisées.
+                            Une fois chargés les fonts et les CSS de l'iconefonts, il suffit de rajouter des elements avec la bonne class pour avoir les icônes, jamais pixellisées.
                         </small>
                     </p>
                 </section>
+
+                <section>
+                    <h4 class="colored">Poids des JS et CSS</h4>
+                    <h2>Exercice avec des chatons</h2>
+                    <small>
+                        <p>
+                            On reprend encore une fois l'exercice
+                        </p>
+                    </small>
+                    <br><br>
+                    <small>
+                        <ul>
+                            <li>
+                                Installer <a href="https://imageoptim.com/fr.html" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;ImageOptim</a>
+                            </li>
+                            <li>
+                                Compresser les images
+                            </li>
+                            <li style="opacity: 0;"></li>
+                            <li>
+                                Regarder l'utilisation de Font Awsome (utilisé dans le footer)
+                            </li>
+                            <li>
+                                Ajouter des liens vers d'autres réseaux : Google+, Flickr, Instagram, Behance, Skype.
+                            </li>
+                        </ul>
+                    </small>
+                    <br>
+                    <br>
+                    <p>
+                        <small>
+                            Attention à&nbsp;:
+                            <ul>
+                                <li>
+                                    garder les images d'origine dans un dossier à part
+                                </li>
+                            </ul>
+                        </small>
+                    </p>
+                </section>
+                    
+                <section>
+                    <h4 class="colored">Poids des JS et CSS</h4>
+                    <h2>Exercice avec <code>&lt;picture&gt;</code></h2>
+                    <small>
+                        <p>
+                            On reprend l'exercice A List Appart
+                        </p>
+                    </small>
+                    <br><br>
+                    <small>
+                        <ul>
+                            <li>
+                                Télécharger le plugin <a href="http://scottjehl.github.io/picturefill/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;PictureFill</a>
+                            </li>
+                            <li>
+                                Ajouter le script à la page, dans le <code>&lt;head&gt;</code>
+                                <pre><code>&lt;script src="assets/js/picturefill.min.js" async&gt;&lt;/script&gt;</code></pre>
+                            </li>
+                            <li>
+                                Ajouter l'element <code>&lt;picture&gt;</code> sur les images inline (logo, illustration principale).
+                                <pre><code><picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="img/image.jpg" media="(max-resolution : 119dpi)">
+    <source srcset="img/image@2x.jpg" media="(min-resolution : 120dpi)">
+    <!--[if IE 9]></video><![endif]-->
+    <img srcset="img/image.jpg" alt="">
+</picture></code></pre>
+                            </li>
+                        </ul>
+                    </small>
+                </section>
+
 
 
                 <section>
