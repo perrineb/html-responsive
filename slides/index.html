@@ -260,7 +260,9 @@
                             <td>EM</td>
                             <td>
                                 <small>
-                                    <strong>Cette taille se calcule relativement à la font-size du parent.</strong><br>
+                                    <strong>Cette taille se calcule relativement à la font-size courrante,<br>
+                                        c'est à dire la font-size du parent pour une propriété font-size,<br>
+                                        et la font-size de l'élement pour les autres propriétés (line-height...)</strong><br>
                                     Si le parent fait 14px et qu’on veut que l’enfant en fasse 28&nbsp;:<br>
                                     <code>28 / 14 = 2em</code>
                                 </small>
@@ -352,8 +354,9 @@
                     <p>
                         <br>
                         <small>
-                            Passer les textes du document des em.<br>
-                            Attention à l'héritage !<br><br>
+                            Passer les textes du document des em.<br><br>
+                            Attention à l'héritage !<br>
+                            N'hésitez pas à déplacer les propriétés trop englobantes aux élements auxquels elles s'appliquent vraiment.
                         </small>
                     </p>
                     <pre><code style="word-wrap: break-word;">p {
@@ -1318,6 +1321,22 @@
                     </section>
 
                 </section>
+
+
+                 <!--
+                    *
+                    * Performances
+                    *
+                    *
+                -->
+
+                <section>
+                    <h1>Performances</h1>
+                    <p>
+                        Faire attention au poids des données à télécharger sur mobile : le réseau est souvent moins rapide, il faut garder un site agréable à consulter.
+                    </p>
+                </section>
+
 
 
                 <!--

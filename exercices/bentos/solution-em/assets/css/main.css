@@ -1,0 +1,237 @@
+
+/* FONTS */
+
+/* pour les textes */
+@import url(http://fonts.googleapis.com/css?family=Slabo+27px|Lobster&subset=latin-ext);
+
+
+/* GENERAL */
+
+*, *:before, *:after {
+    box-sizing: border-box;  /* http://css-tricks.com/box-sizing/ */
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    color: red;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " "; 
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+
+
+/* HEADER */
+.main-header {
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 100%;
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.main-header__inner {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    padding: 1.25em;  /* 20px */
+}
+
+.main-header h1 {
+    float: left;
+    font-size: 1.625em;  /* 26px */
+}
+
+.main-header h1 span {
+    color: #c02126;
+    font-size: 1.23em;  /* 32px */
+}
+
+.main-header nav {
+    display: block;
+    float: right;
+}
+
+.main-header ul {
+    position: relative;
+}
+
+.main-header li {
+    position: relative;
+    float: left;
+}
+
+.main-header li a {
+    display: inline-block;
+    font-size: .875em;  /* 14px, déplacé de .main-header ul  */
+    padding: 1.07em;  /* 15px */
+}
+
+.main-header li li {
+    float: none;
+}
+
+.main-header li ul {
+    display: none;
+    position: absolute;
+    top: 2.75em;  /* 15px + 14px + 15px */    /* 44px */
+    border: 1px solid #eee;
+    border-top: 0;
+    background-color: #fff;
+    width: 120%;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.main-header li:hover ul {
+    display: block; 
+}
+
+
+/* MAIN */
+
+.contents {
+    width: 960px;
+    margin: 5.25em auto 0; /* 20px + 15px + 14px + 15px + 20px */ 
+    padding: 50px 20px; 
+}
+
+.contents article {
+    float: left;
+    width: 300px;
+    padding: 20px 10px;
+}
+
+.main-content {
+    float: left;
+    width: 600px;
+}
+
+.main-content p {
+    font-size: .875em;    /* 14px */
+    line-height: 1.42em;    /* 20px */
+}
+
+.main-content h2 {
+    text-transform: uppercase;
+    color: #c02126;
+    font-size: 1.25em;    /* 20px */
+    line-height: 1.5em;    /* 30px */
+}
+
+.main-content .main-article {
+    width: 600px;
+}
+
+.main-content .main-article h2 {
+    font-size: 1.375em;    /* 22px */
+}
+
+
+
+/* ASIDE */
+
+.main-aside {
+    float: right;
+    width: 300px;
+}
+
+.main-aside article p {
+    font-size: .75em;    /* 12px */
+    line-height: 1.66em;    /* 20px */
+}
+
+.main-aside h3 {
+    /*font-size: 1em;*/
+    line-height: 1.75em;    /* 28px */
+    color: #c02126;
+}
+
+
+/* FOOTER */
+
+.main-footer {
+    background: url("../img/tile-footer.png") repeat-x 50% 0 transparent;
+}
+
+.main-footer__inner {
+    width: 960px;
+    margin: 0 auto;
+    padding: 50px 10px;
+}
+
+.social {
+    text-align: center;
+    padding: 10px 30px 50px;
+}
+
+.social li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.social a {
+    display: block;
+    font-size: .875em;    /* 14px */
+    height: 2.57em;     /* 36px */
+    padding: 0 .71em ;    /* 0 10px */
+    border: 1px dashed #c02126;
+    line-height: 2.57em;    /* 36px */
+    border-radius: 2em;    /* 18px */
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+
+.social a, .social a:visited {
+    color: #000;
+}
+.social a:hover, .social a:active {
+    color: #c02126;
+}
+
+.copyright {
+    font-size: .625em;    /* 10px */
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
