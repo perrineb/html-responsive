@@ -1337,6 +1337,13 @@
                     </p>
                 </section>
 
+                
+                <!--
+                    *
+                    * Mobile-first
+                    *
+                    *
+                -->
 
                 <section>
                     <h2 class="colored">Approche Mobile First</h2>
@@ -1374,6 +1381,230 @@
                         </small>
                     </p>
                 </section>
+
+
+                <!--
+                    *
+                    * Poids des JS et CSS
+                    *
+                    *
+                -->
+                
+                <section>
+                    <h2 class="colored">Poids des JS et CSS</h2>
+                    <br>
+                    <p>Il faut avoir le moins possible de fichiers à charger, de la taille la plus petite possible.</p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Poids des JS et CSS</h4>
+                    <h2>Minification &amp; concaténation</h2>
+                    <br>
+                    <small>
+                        <ul>
+                            <li>
+                                <strong>minification</strong> des fichiers&nbsp;: on enlève (automatiquement) les espaces, tous les élements inutiles du code.<br>
+                                Par exemple en utilisant&nbsp;:
+                                <ul>
+                                    <li>
+                                        Pour les CSS : <a href="http://cssminifier.com/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;CSS Minifier</a>
+                                    </li>
+                                    <li>
+                                        Pour les JS : <a href="http://jscompress.com/ " target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;JS Compress</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>concaténation</strong> des fichiers de même type lorsque c’est possibles&nbsp;: on regroupe tous les fichiers en un seul
+                            </li>
+                        </ul>
+                    </small>
+                    <br><br>
+                    <p>
+                        Attention à garder les fichiers de travail !<br>
+                        <small>
+                            On crée des fichiers supplémentaires, on n'écrase pas.<br>
+                            <code>main.css</code> -> <code>main.min.css</code>
+                        </small>
+                    </p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Poids des JS et CSS</h4>
+                    <h2>Exercice avec des chatons</h2>
+                    <small>
+                        <p>
+                            On reprend une nouvelle fois l'exercice&nbsp;!
+                        </p>
+                    </small>
+                    <br><br>
+                    <small>
+                        <ul>
+                            <li>
+                                Minifier et concaténer les fichiers CSS et JS.
+                            </li>
+                            <li>
+                                Ne charger qu'un seul fichier CSS et un seul fichier JS pour la page.
+                            </li>
+                        </ul>
+                    </small>
+                    <br>
+                    <br>
+                    <p>
+                        <small>
+                            Attention à&nbsp;:
+                            <ul>
+                                <li>
+                                    entrer les fichiers dans le bon ordre
+                                </li>
+                                <li>
+                                    linker les bons fichiers dans le HTML
+                                </li>
+                            </ul>
+                        </small>
+                    </p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Poids des JS et CSS</h4>
+                    <h2>Automatisation</h2>
+                    <br>
+                    <p>
+                        <small>
+                        Fastidieux à faire à la main,<br>
+                        surtout si on doit régulièrement reprendre les fichiers pourcentager les modifier !
+                        </small>
+                    </p>
+                    <br>
+                    <p>
+                        Solution : automatiser le processus<br>
+                        <small>
+                            avec Ruby on Rails, un task runner (comme <a href="http://gruntjs.com/" target="_blank">Grunt</a>, <a href="http://gulpjs.com/" target="_blank">Glup</a>...)
+                        </small>
+                    </p>
+                </section>
+
+
+                <!--
+                    *
+                    * Poids des Images
+                    *
+                    *
+                -->
+
+                <section>
+                    <h2 class="colored">Poids des images</h2>
+                    <br>
+                    <p>Comme pour les CSS et JS, il faut avoir le moins possible de fichiers à charger, de la taille la plus petite possible.</p>
+                </section>
+
+                <section>
+                    <h4 class="colored">Taille des images</h4>
+                    <h2>Minification</h2>
+                    <br>
+                    <p>
+                        Avec <a href="https://imageoptim.com/fr.html" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;ImageOptim</a>
+                    </p>
+                    <small>
+                        <p>
+                            Minifie les PNG, JPEG et GIF animés.
+                        </p>
+                    </small>
+                    <br><br>
+                    <p>
+                        Attention à garder les fichiers d'origine !<br>
+                        <small>
+                            Avec la minification, les images perdent les données permettant de les éditer.
+                        </small>
+                    </p>
+                </section>
+
+
+                <section>
+                    <h4 class="colored">Poids des images</h4>
+                    <h2>Element <code>&lt;picture&gt;</code></h2>
+                    <p>Des images servies à la bonne taille !</p>
+                    <p>
+                        <small>
+                            Picture permet de donner une série de sources à une image, en fonction de la taille de l’écran.
+                        </small>
+                    <pre><code><picture>
+    <source srcset="examples/images/extralarge.jpg" media="(min-width: 1000px)">
+    <source srcset="examples/images/large.jpg" media="(min-width: 800px)">
+    <img srcset="examples/images/medium.jpg" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+</picture></code></pre>
+                        <br>
+                        <small>
+                            Attention ! A l'étude au W3C, encore peu implémenté, même sur les navigateurs s plus modernes.<br>
+                            <a href="http://caniuse.com/#feat=picture" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Support de l'element <code>&lt;picture&gt;</code></a><br><br>
+                            Polyfill à utiliser en attendant un support plus complet : <a href="http://scottjehl.github.io/picturefill/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;PictureFill</a>
+                        </small>
+                    </p>
+                </section>
+
+
+                <section>
+                    <h4 class="colored">Poids des images</h4>
+                    <h2>Avec CSS</h2>
+                    <br>
+                    <small style="position: relative; width: 100%">
+                        <ul style="position: relative; width: 100%">
+                            <li>
+                                Les images dont le parent est en <code>display:none</code> ne sont pas chargées.
+                            </li>
+                            <li style="opacity: 0;"></li>
+                            <li style="position: relative; width: 100%">
+                                Utiliser le <strong>dataURI</strong> pour es toutes petites images : <a href="http://dopiaza.org/tools/datauri/index.php" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Outil de conversion en ligne</a><br>
+                                L'image est convertie en une chaîne de texte qui peut être intégrée directement dans le CSS.<br>
+<pre style="position: relative; width: 100%;"><code>div {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAHCAMAAAAYuxziAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTVCOTFCRTdBNzc0MTFFMzlGOTJGNTI4QkQ5ODNDQjYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTVCOTFCRThBNzc0MTFFMzlGOTJGNTI4QkQ5ODNDQjYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1NUI5MUJFNUE3NzQxMUUzOUY5MkY1MjhCRDk4M0NCNiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1NUI5MUJFNkE3NzQxMUUzOUY5MkY1MjhCRDk4M0NCNiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvekQwMAAAAhUExURcG/v6+srd3c3Kajo+7t7be1teLh4aikpefm5+rq6v///+xx36UAAAALdFJOU/////////////8ASk8B8gAAACJJREFUeNpiYOXg4mJgY+bkYuBiYmdhAHIYISywGEgWIMAADQsAvvhMsw0AAAAASUVORK5CYII=);
+}</code></pre>
+                            <a href="http://www.alsacreations.com/article/lire/1439-data-uri-schema.html" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Plus d'infos sur DataURI</a>
+                            </li>
+                        </ul>
+                    </small>
+                </section>
+                        
+                <section>
+                    <h4 class="colored">Poids des images</h4>
+                    <h2>Font d'icônes</h2>
+                    <p>
+                        Pour les icônes, utiliser des fonts qui ne contient pas des lettres mais des icônes.<br><br>
+                        Ex&nbsp;: <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;FontAwesome</a>, plus de 360 icons pour des usages très variés.
+                    </p>
+                    <br>
+                    <p>
+                        <small>
+                            Une fois chargés les fonts et les CSS de l'iconefonts, il suffit de rajouter de selements avec la bonne class pour avoir les icônes, jamais pixellisées.
+                        </small>
+                    </p>
+                </section>
+
+
+                <section>
+                    <h4 class="colored">Taille assets</h4>
+                    <h2>Grunt</h2>
+                    <p><small>est un outil d’automatisation de tâches</small></p>
+                    <img src="img/grunt.png" alt="" style="width: 15%;">
+                    <small>
+                        <p>
+                            On ajoute des plugins qui permettent d’executer des tâches précises (compiler le SASS en CSS, minifier le CSS obtenu, ainsi que les JS, concaténer les fichiers CSS et JS, compresser les images...)
+                        </p>
+                        <p>
+                            On le configure en lui disant quelles tâches il doit effectuer et quand.
+                        </p>
+                        <p>
+                            Lorsqu’on développe, à chaque modification Grunt regénère les fichiers qui ont besoin de l’être (les SASS en CSS, par exemple).<br>
+                            Quand on veut livrer, on lui dit de tout minifier avec un ligne de commande.
+                        </p>
+                        <br><br>
+                    </small>
+                    <p>
+                        <a href="http://gruntjs.com/" target="_blank"><i class="fa fa-hand-o-right"></i>&nbsp;Grunt</a>
+                    </p>
+                </section>
+
+
 
 
 

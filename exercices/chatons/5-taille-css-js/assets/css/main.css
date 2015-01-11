@@ -1,0 +1,310 @@
+
+/* FONTS */
+
+/* pour les textes */
+@import url(http://fonts.googleapis.com/css?family=Slabo+27px|Architects+Daughter&subset=latin-ext);
+
+
+/* GENERAL */
+
+* {
+    box-sizing: border-box;  /* http://css-tricks.com/box-sizing/ */
+}
+
+body {
+    background-color: #FFE3CC;
+    color: #301B09;
+    margin-top: 3.5em; 
+
+}
+@media screen and (min-width : 600px) {
+    body {
+        margin-top: 0;
+    }
+}
+
+.main-header, .main-content {
+    /*
+     * Change width en max-width
+     */
+    display: block;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* HEADER */
+
+.main-title {
+    /*
+     * Ajoute un positionnement relatif 
+     * Change width en max-width
+     * Enlève le line-height et ajoute du padding en haut et en bas
+     */
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    font-size: 1.875em; /* 30px */
+    font-family: 'Slabo 27px', serif;
+    text-align: center;
+}
+
+.banner {
+    /*
+     * Ajoute un positionnement relatif 
+     * Change width en max-width
+     * Ajoute un background-size: cover
+     */
+    position: relative;
+    max-width: 700px;
+    height: 50px;
+    margin: 0 auto;
+    background: url(../img/banner-cat.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+@media screen and (min-width : 600px) {
+    .banner {
+        height: 119px;
+    }
+}
+
+
+/* NAVIGATION */
+
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .4); /* Avec un joli petit box shadow pour renforcer l'effet de boite superposée au contenu */
+    z-index: 9;
+    font-family: 'Slabo 27px', serif;
+}
+@media screen and (min-width : 600px) {
+    .main-nav {
+        position: relative;
+        max-width: 700px;
+        margin: 0 auto;
+        box-shadow: none;
+    }
+}
+
+
+@media screen and (min-width : 600px) {
+    .main-nav li {
+        float: left;
+        width: 25%;
+        text-align: center;
+    }
+}
+
+.main-nav a, .main-nav a:visited {
+    /*
+     * Passe les liens en block pour qu'ils prennent tout l'espace disponible et soient plus faciles à cliquer
+     * Ajoute le padding top et bottom qui était sur les li aux liens
+     */
+    display: block;
+    padding: 1.5em; /* 20px */
+    line-height: 1em;
+    background-color: #301B09;
+    color: #fefff6;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.main-nav a:hover, .main-nav a:active {
+    background-color: #683b14;
+    color: #fefff6;
+    text-decoration: none;
+}
+
+@media screen and (min-width : 600px) {
+    .main-nav a, .main-nav a:visited {
+        color: #683b14;
+        background-color: transparent;
+    }
+
+    .main-nav a:hover, .main-nav a:active {
+        color: #874e1d;
+        background-color: transparent;
+    }
+
+}
+
+.main-nav .toggle-menu { 
+    display: block;
+    text-align: left;
+    background-image: url(../img/menu-open-fff.png);
+    -webkit-background-size: 17px 19px;
+    background-size: 17px 19px;
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width : 600px) {
+    .main-nav .toggle-menu { 
+        display: none;
+    }
+}
+
+.main-menu {
+    display: none;
+}
+
+@media screen and (min-width : 600px) {
+    .main-menu { 
+        display: block;
+    }
+}
+
+/* Styles différents pour le toggle quand la classe menu ouvert est là */
+.menu-opened .toggle-menu {
+    background-image: url(../img/menu-close-fff.png);
+    -webkit-background-size: 17px;
+    background-size: 17px;
+}
+
+/* Menu redevient visible quand la classe menu ouvert est là */
+.menu-opened .main-menu {
+    display: block;
+}
+
+
+/* CONTENU */
+
+.main-content {
+    clear: left;
+    margin-top: 50px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.diapos {
+    overflow: hidden;
+    margin: 0 -10px;
+}
+
+.diapo {
+    width: 100%;
+}
+
+@media screen and (min-width : 450px) and (max-width : 650px) {
+    .diapo {
+        float: left;
+        width: 50%;
+    }
+}
+@media screen and (min-width : 650px) {
+    .diapo {
+        width: 25%;
+    }
+}
+
+
+
+
+.diapo:nth-child(4n+5) { /* http://css-tricks.com/how-nth-child-works/ */
+    clear: both;
+}
+
+.diapo figure {
+    margin: 10px;
+    border: 1px solid #301B09;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: #fefff6;
+    box-shadow: 1px 1px 2px 0px rgba(156, 111, 75, .5);
+}
+
+.diapo figure:hover {
+    box-shadow: 1px 1px 2px 0px rgba(156, 111, 75, .8);
+}
+
+.diapo img {
+    /*
+     * Donne une taille en % et une hauteur automatique (l'image trouve la bonne hauteur pour conserver son ratio)
+     */
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.diapo figcaption {
+    text-align: center;
+    margin: 20px 0;
+    font-size: .875em; /* 14px */
+}
+
+
+/* FOOTER */
+
+.main-footer {
+    display: block;
+    clear: both;
+    margin-top: 50px;
+    padding: 50px 0 80px;
+    border-top: 5px solid #FFE985;
+    text-align: center;
+    font-family: 'Slabo 27px', serif;
+    color: #FFE985;
+    background-color: #301B09;
+}
+
+.main-footer h2 {
+    /*
+     * Change width en max-width
+     */
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-size: 1.5em; /* 24px */
+}
+
+.main-footer ul {
+    /*
+     * Ajoute un positionnement relatif
+     * Change width en max-width
+     */
+    position: relative;
+    max-width: 960px;
+    margin: 50px auto 0;
+    padding: 0 10px;
+    font-size: .875em; /* 14px */
+}
+
+@media screen and (min-width : 600px) {
+    .main-footer li {
+        float: left;
+        width: 20%;
+    }
+}
+
+.main-footer a {
+    display: block;
+    padding: 15px;
+    font-size: 1.125em; 
+}
+
+@media screen and (min-width : 600px) {
+    .main-footer a  {
+        display: inline;
+        padding: 10px;
+        font-size: 1em; 
+    }
+}
+
+.main-footer a, .main-footer a:visited {
+    color: #FFE985;
+    text-decoration: none;
+}
+
+.main-footer a:hover, .main-footer a:active {
+    color: #FFE3CC;
+    text-decoration: none;
+}
+
+
+
