@@ -1,0 +1,295 @@
+
+h2 {
+    position: relative;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 54px;
+}
+
+.subtitle {
+    position: relative;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+
+
+/* CONTENT INTRO */
+
+.content-intro {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background-color: #22262c;
+    padding: 100px 0 200px;
+}
+
+.content-intro h2 {
+    padding-bottom: 35px;
+    font-size: 42px;
+}
+
+.content-intro p {
+	font-size: 21px;
+    padding-bottom: 50px;
+	color: #ccc;
+}
+
+.intro-deco {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 195px;
+    background: url("../img/films.png") 50% 50% no-repeat transparent;
+}
+
+/* fin CONTENT INTRO */
+
+
+
+
+
+
+/* CONTENT ACTIONS */
+
+.content-actions {
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+.action {
+    float: left;
+    width: 320px;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.action-icon {
+    display: block;
+    margin: 0 auto 25px auto;
+    height: 45px;
+}
+
+.action-icon-discover {
+    background: url("../img/decouvrez.png") 50% 0 no-repeat transparent;
+}
+
+.action-icon-rate {
+    background: url("../img/notez.png") 50% 0 no-repeat transparent;
+}
+
+.action-icon-share {
+    background: url("../img/partagez.png") 50% 0 no-repeat transparent;
+}
+
+.action-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.action-description {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 14px;
+    color: #666;
+}
+
+/* fin CONTENT ACTIONS */
+
+
+
+
+
+
+/* CONTENT QUOTES */
+
+.content-quotes {
+    position: relative;
+    background: url("../img/blockquote.png") no-repeat 50% 50px #f5f5f5;
+    padding: 50px 0;
+}
+
+.diaporama-quotes {
+    width: 960px;
+}
+
+.diaporama-quotes  li {
+    clear: both;
+    width: 960px;    
+    padding-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.quote-avatar {
+    float: left;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #fff;
+    margin: 5px 50px;
+}
+
+.quote-blockquote {
+    font-size: 16px;
+    margin: 16px 40px;
+    line-height: 22px;
+    overflow: hidden;
+}
+
+.quotes-name {
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* CONTENT QUOTES : Navigation */
+
+.diaporama-next, .diaporama-prev {
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: -2.5em;
+    height: 5em;
+    width: 5em;
+    color: #74d336;
+}
+
+.diaporama-next:hover, .diaporama-prev:hover {
+    color: #68c42b;
+}
+
+.diaporama-next {
+    right: 20px;
+}
+
+.diaporama-prev {
+    left: 20px;
+}
+
+.diaporama-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.diaporama-nav li {
+    display: inline-block;
+}
+
+/* fin CONTENT QUOTES */
+
+
+
+
+
+
+/* CONTENT FRIENDS */
+
+.content-friends {
+    line-height: 24px;
+    border-top: 1px solid #eee;
+    padding: 50px 0;
+    background-color: #fbfbfb;
+    overflow: hidden;
+}
+
+.content-friends-left {
+    float: left;
+    width: 480px;
+}
+
+.content-friends p {
+    margin: 18px 0;
+}
+
+.content-friends-right {
+    float: right;
+    width: 380px;
+}
+
+/* fin CONTENT FRIENDS */
+
+
+
+
+
+
+/* CONTENT SONDAGE */
+
+.content-sondage {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.content-sondage .subtitle {
+    margin-bottom: 50px;
+}
+
+.sondages {
+    overflow: hidden;
+}
+
+.sondage {
+    float: left;
+    height: 230px;
+    width: 480px;
+    padding-right: 15px;
+}
+
+.sondage article {
+    position: relative;
+    width: 465px;
+    height: 100%;
+    background-color: #fff;
+}
+
+.content-sondage img {
+    border-bottom: 3px solid #31ace0;
+}
+
+.sondage-title {
+    font-size: 22px;
+    line-height: 26px;
+    padding: 30px 15px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.sondage-description {
+    padding: 0 15px 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90%;
+    color: #666;
+}
+
+
+/* fin CONTENT SONDAGE */
+
+
+
+
+/* CONTENT SEPARATEURS */
+
+.content-separteur {
+    height: 250px;
+    background-size: cover;
+}
+
+.content-separteur1 {
+    background: url(../img/separateur-books.jpg) 50% 50% no-repeat #000;
+}
+
+.content-separteur2 {
+    background: url(../img/separateur-space.jpg) 50% 50% no-repeat #000;
+}
+
+
+/* fin CONTENT SEPARATEURS */
+
+
+
+

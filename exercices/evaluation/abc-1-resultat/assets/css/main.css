@@ -1,0 +1,35 @@
+
+/* GENERAL */
+
+*, *:before, *:after {
+    box-sizing: border-box;	 /* http://css-tricks.com/box-sizing/ */
+}
+
+a {
+    color: #2E81B0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1e5573;
+    text-decoration: none;
+}
+
+body {
+    background-color: #E5E5E5;
+    color: #111;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+
+.content-block {
+	position: relative;
+	margin: 0 auto;
+    max-width: 980px;
+    padding: 0 10px;
+}
+
+
+

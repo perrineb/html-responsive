@@ -1,0 +1,157 @@
+/* HEADER */
+
+.main-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+	border-bottom: 1px solid #b4b4b4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+	overflow: hidden;
+    z-index: 90;
+}
+
+
+/* logo */
+
+.logo {
+    position: relative;
+    padding: 15px 15px 17px 40px;
+	float: left;
+    width: 230px;
+}
+
+.logo-deco {
+    position: absolute;
+	height: 52px;
+    left: 0;
+    top: -1px;
+    width: 29px;
+    background: url(../img/bandeau.png);
+}
+
+
+/* navigation */
+
+.main-nav {
+	float: left;
+    margin-left: 25px;
+}
+
+.main-nav li {
+	float: left;
+}
+
+.main-nav a {
+	display: inline-block;
+    font-size: 20px;
+    line-height: 54px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.main-nav a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+
+.main-nav  .toggle-menu {
+    display: none;
+}
+
+@media all and (max-width:920px) {
+    .main-nav {
+        float: none;
+        clear: both;
+    }
+}
+
+
+@media all and (max-width:550px) {
+    .main-header {
+        position: relative;
+        top: 55px;
+    }
+
+     /* nav fixée en haut */
+
+    .main-nav li, .main-nav a {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+
+    .main-nav a, .main-nav a:visited {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .main-nav a:hover, .main-nav a:active {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .main-nav .toggle-menu { /* on surqualifie le lien pour overwriter .main-nav a */
+        display: block;
+        text-align: left;
+        background-image: url(../img/menu-open-fff.png);
+        -webkit-background-size: 17px 19px;
+        background-size: 17px 19px;
+        background-position: 95% 50%;
+        background-repeat: no-repeat;
+    }
+    
+    /* Menu cacahé par défaut */
+    .main-menu {
+        display: none;
+    }
+
+    /* Styles différents pour le toggle quand la classe menu ouvert est là */
+    .menu-opened .toggle-menu {
+        background-image: url(../img/menu-close-fff.png);
+        -webkit-background-size: 17px;
+        background-size: 17px;
+    }
+
+    /* Menu redevient visible quand la classe menu ouvert est là */
+    .menu-opened .main-menu {
+        display: block;
+    }
+
+    .main-nav {
+        float: none;
+        clear: both;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .4); /* Avec un joli petit box shadow pour renforcer l'effet de boite superposée au contenu */
+        z-index: 9;
+        margin-left: 0;
+    }
+
+    
+}
+
+
+/* bouton de création de compte */
+
+
+.create-account {
+	float: right;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 8px 10px;
+    padding: 8px;
+	background-color: #74d336;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.create-account:hover {
+	color: #fff;
+	background-color: #68c42b;
+}
